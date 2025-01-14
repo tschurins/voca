@@ -83,7 +83,7 @@ class QuizApp : Application {
     }
 
     private fun playNextQuizItem(stage: Stage, context: QuizContext) {
-        val currentItem = context.itemIterator.next()
+        val currentItem = context.nextItem()
         stage.scene = questionPanel(
             currentItem.question,
             { onAnswer(stage, context, currentItem, it) },
@@ -114,15 +114,14 @@ class QuizApp : Application {
     }
 
     private fun onAnswer(stage: Stage, context: QuizContext, currentItem: QuizItem, answer: String) {
-        val convertedAnswer = context.convertAnswer(answer)
-        val result = context.getSuccess(currentItem, convertedAnswer)
-        context.setSuccess(currentItem, result)
+        val convertedAnswer = context.setAnswer(answer)
+        val result = context.checkSuccess()
         stage.scene = answerPanel(
             currentItem,
             result,
             convertedAnswer,
             { 
-                if (context.itemIterator.hasNext()) {
+                if (context.hasNextItem()) {
                     playNextQuizItem(stage, context)
                 } else {
                     stage.scene = resultPanel(stage, context)

@@ -1,4 +1,5 @@
 .vscode
+.kotlin
 
 # Ignore Gradle project-specific cache directory
 .gradle

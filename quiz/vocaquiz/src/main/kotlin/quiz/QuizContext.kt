@@ -9,21 +9,34 @@ class QuizContext {
     val failures: List<QuizItem>
         get() = _failures
     val answerLanguage: Language
-    val itemIterator: Iterator<QuizItem>
+    private val itemIterator: Iterator<QuizItem>
+    var currentItem: QuizItem? = null
+        private set
+    var currentAnswer: String? = null
     
     constructor(quiz: Quiz, answerLanguage: Language) {
         this.answerLanguage = answerLanguage
         itemIterator = quiz.items.iterator()
     }
 
-    fun setSuccess(item: QuizItem, result: AnswerResult) {
+    private fun setSuccess(result: AnswerResult) {
         when (result) {
             AnswerResult.SUCCESS -> success()
             AnswerResult.SUCCESS_HOMOPHONE -> successHomophone()
-            AnswerResult.FAILURE -> failure(item)
+            AnswerResult.FAILURE -> failure()
         }
     }
-
+    
+    fun nextItem() : QuizItem {
+        currentAnswer = null
+        currentItem = itemIterator.next()
+        return currentItem!!
+    }
+    
+    fun hasNextItem() : Boolean {
+        return itemIterator.hasNext()
+    }
+    
     fun success() {
         score.success()
     }
@@ -32,18 +45,20 @@ class QuizContext {
         score.success()
     }
 
-    fun failure(item: QuizItem) {
+    fun failure() {
         score.failure()
-        _failures.add(item)
+        _failures.add(currentItem!!)
     }
 
-    fun convertAnswer(answer: String) : String {
-        return answerLanguage.characterConvertor(answer)
+    fun setAnswer(answer: String) : String {
+        val converted = answerLanguage.characterConvertor(answer)
+        currentAnswer = converted
+        return converted
     }
 
-    fun getSuccess(item: QuizItem, answer: String): AnswerResult {
+    fun checkSuccess(): AnswerResult {
         var bestResult = AnswerResult.FAILURE
-        for (possibleExpected in WordParts(item.answer).all) {
+        for (possibleExpected in WordParts(currentItem!!.answer).all) {
             val alternativeIndex = possibleExpected.indexOf("[")
             val possibleResult: ComparatorResult
             if (alternativeIndex >= 0) {
@@ -51,7 +66,7 @@ class QuizContext {
                 // without
                 val firstPossibility = possibleExpected.substring(0, alternativeIndex) + 
                         possibleExpected.substring(alternativeEnd + 1)
-                val firstPossibleResult = answerLanguage.wordComparator.compare(firstPossibility.trim(), answer)
+                val firstPossibleResult = answerLanguage.wordComparator.compare(firstPossibility.trim(), currentAnswer!!)
                 when (firstPossibleResult) {
                     ComparatorResult.EXACT_MATCH -> {
                         bestResult = AnswerResult.SUCCESS
@@ -69,10 +84,10 @@ class QuizContext {
                 val secondPossibility = possibleExpected.substring(0, alternativeIndex) +
                         possibleExpected.substring(alternativeIndex + 1, alternativeEnd) +
                         possibleExpected.substring(alternativeEnd + 1)
-                possibleResult = answerLanguage.wordComparator.compare(secondPossibility.trim(), answer)
+                possibleResult = answerLanguage.wordComparator.compare(secondPossibility.trim(), currentAnswer!!)
 
             } else {
-                possibleResult = answerLanguage.wordComparator.compare(possibleExpected.trim(), answer)
+                possibleResult = answerLanguage.wordComparator.compare(possibleExpected.trim(), currentAnswer!!)
             }
             when (possibleResult) {
                 ComparatorResult.EXACT_MATCH -> {
@@ -87,6 +102,7 @@ class QuizContext {
                 ComparatorResult.NO_MATCH -> { /* do nothing */ }
             }
         }
+        setSuccess(bestResult)
         return bestResult
     }
 }
