@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+mkdir -p build/run
+cd build/run
+rm ui -rf
+unzip -q ../distributions/ui.zip
+ui/bin/ui

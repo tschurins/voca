@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+
+mkdir -p build/run
+cd build/run
+rm vocaquiz -rf
+unzip -q ../distributions/vocaquiz.zip
+cd vocaquiz/bin
+./vocaquiz jal.voca.lang.GreekKt $*

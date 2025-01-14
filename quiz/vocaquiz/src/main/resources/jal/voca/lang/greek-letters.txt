@@ -1,0 +1,24 @@
+Αα	ά	Alpha	
+Ββ		Beta	
+Γγ		Gamma	
+Δδ		Delta	
+Εε	έ	Epsilon	
+Ζζ		Zeta	
+Ηη	ή	Eta	
+Θθ		Theta	
+Ιι	ί	Iota	
+Κκ		Kappa	
+Λλ		Lambda	
+Μμ		Mu		
+Νν		Nu
+Ξξ		Xi
+Οο	ό	Omicron
+Ππ		Pi
+Ρρ		Rho
+Σσς		Sigma
+Ττ		Tau
+Υυ	ύ	Upsilon
+Φφ		Phi
+Χχ		Chi
+Ψψ		Psi
+Ωω	ώ	Omega
