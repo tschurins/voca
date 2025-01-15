@@ -64,9 +64,19 @@ class QuizContextTest {
     fun getSuccess_alternative() {
         val item = QuizItem("Q?", "A[n] Answer", "")
         val context = QuizContext(Quiz(listOf(item)), getLanguage())
+        context.nextItem()
         context.setAnswer("an answer")
         assertEquals(AnswerResult.SUCCESS, context.checkSuccess())
         context.setAnswer("a answer")
+        assertEquals(AnswerResult.SUCCESS, context.checkSuccess())
+    }
+
+    @Test
+    fun getSuccess_trim() {
+        val item = QuizItem("Q?", "A", "")
+        val context = QuizContext(Quiz(listOf(item)), getLanguage())
+        context.nextItem()
+        context.setAnswer("A ")
         assertEquals(AnswerResult.SUCCESS, context.checkSuccess())
     }
 

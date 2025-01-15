@@ -51,7 +51,7 @@ class QuizContext {
     }
 
     fun setAnswer(answer: String) : String {
-        val converted = answerLanguage.characterConvertor(answer)
+        val converted = answerLanguage.characterConvertor(answer.trim())
         currentAnswer = converted
         return converted
     }

@@ -85,8 +85,13 @@ class GreekCharacters {
                 if (previous == null) {
                     throw RuntimeException("UnsupportedCharacter " + c)
                 }
-                result.append(getGreekLetterFor(previous + "h"))
-                previous = null
+                try {
+                    result.append(getGreekLetterFor(previous + "h"))
+                    previous = null
+                } catch (e: RuntimeException) {
+                    result.append(getGreekLetterFor("" + previous))
+                    previous = c
+                }
 
             } else if (previous != null && c == 's' && previous == 'p') {
                 result.append(getGreekLetterFor("ps"))
@@ -145,7 +150,9 @@ class GreekCharacters {
             "ps" -> 'ψ'
             "oh", "w" -> 'ω'
             "óh", "òh" -> 'ώ'
-            else -> throw RuntimeException(c + " - not supported")
+            else -> {
+                if (c.length == 1) c[0] else throw RuntimeException(c + " - not supported")
+            }
         }
         return if (wasUpper) result.uppercaseChar() else result
     }
@@ -175,6 +182,7 @@ class GreekCharacters {
         val r1 = s
             .replace("οι", "ι")
             .replace("ει", "ι")
+            .replace("αι", "ε")
         val sb = StringBuilder()
         for (c in r1) {
             sb.append(getHomophone(c))

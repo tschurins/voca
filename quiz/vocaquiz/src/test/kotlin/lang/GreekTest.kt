@@ -13,6 +13,20 @@ class GreekTest {
     }
 
     @Test
+    fun convertCharacters_alreadyGreek() {
+        val toConvert = "Αγορι"
+        val result = convert(toConvert)
+        assertEquals("Αγορι", result)
+    }
+
+    @Test
+    fun convertCharacters_ignoreMalformed() {
+        val toConvert = "Aghori"
+        val result = convert(toConvert)
+        assertEquals("Αγhορι", result)
+    }
+
+    @Test
     fun convertCharacters_lastS() {
         val toConvert = "pohs"
         val result = convert(toConvert)
@@ -58,6 +72,15 @@ class GreekTest {
         val result = greekLanguage.wordComparator.compare(
             convert("theía"),
             convert("thia"),
+        )
+        assertEquals(ComparatorResult.HOMOPHONE, result)
+    }
+
+    @Test
+    fun compare_homophone_ai() {
+        val result = greekLanguage.wordComparator.compare(
+            convert("gunaika"),
+            convert("guneka"),
         )
         assertEquals(ComparatorResult.HOMOPHONE, result)
     }
