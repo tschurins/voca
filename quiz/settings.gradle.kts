@@ -11,4 +11,4 @@ plugins {
 }
 
 rootProject.name = "voca"
-include("vocaquiz", "vocaio", "ui")
+include("vocaquiz", "vocaio-excel", "vocaio-gs", "ui")
