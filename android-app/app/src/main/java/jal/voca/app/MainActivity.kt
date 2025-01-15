@@ -34,13 +34,11 @@ import jal.voca.quiz.Quiz
 import jal.voca.quiz.QuizContext
 
 class MainActivity : ComponentActivity() {
-    private var dictionary: Dictionary? = null
-
-    fun getDictionary(): Dictionary {
-        if (dictionary == null) {
-            dictionary = DictionaryCsvReader().readGreekDictionary()
+    private fun getDictionary(): Dictionary {
+        if (globalDictionary == null) {
+            globalDictionary = DictionaryCsvReader().readGreekDictionary()
         }
-        return dictionary!!
+        return globalDictionary!!
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -67,7 +65,7 @@ class MainActivity : ComponentActivity() {
         context.nextItem();
 
         globalContext = context
-        val intent = Intent(this, QuestionActivity::class.java)
+        val intent = Intent(this, QuizActivity::class.java)
         startActivity(intent)
     }
 
@@ -120,7 +118,7 @@ class MainActivity : ComponentActivity() {
     @Preview(showBackground = true)
     @Composable
     fun MenuPreview() {
-        var dictionary = getDictionary()
+        val dictionary = getDictionary()
         VocaTheme {
             Menu(dictionary)
         }
