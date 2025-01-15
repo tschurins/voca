@@ -8,52 +8,66 @@ import kotlin.test.Test
 class QuizContextTest {
     @Test
     fun getSuccess_singleAnswer() {
-        val context = QuizContext(Quiz(listOf()), getLanguage())
-        val result = context.getSuccess(QuizItem("Q?", "Answer", ""), "answer")
+        val context = QuizContext(Quiz(listOf(QuizItem("Q?", "Answer", ""))), getLanguage())
+        context.nextItem()
+        context.setAnswer("answer")
+        val result = context.checkSuccess()
         assertEquals(AnswerResult.SUCCESS, result)
     }
 
     @Test
     fun getSuccess_failure() {
-        val context = QuizContext(Quiz(listOf()), getLanguage())
-        val result = context.getSuccess(QuizItem("Q?", "Answer", ""), "wrong")
+        val context = QuizContext(Quiz(listOf(QuizItem("Q?", "Answer", ""))), getLanguage())
+        context.nextItem()
+        context.setAnswer("wrong")
+        val result = context.checkSuccess()
         assertEquals(AnswerResult.FAILURE, result)
     }
 
     @Test
     fun getSuccess_homophone() {
-        val context = QuizContext(Quiz(listOf()), getLanguage())
-        val result = context.getSuccess(QuizItem("Q?", "Answer with Y", ""), "answer with i")
+        val context = QuizContext(Quiz(listOf(QuizItem("Q?", "Answer with Y", ""))), getLanguage())
+        context.nextItem()
+        context.setAnswer("answer with i")
+        val result = context.checkSuccess()
         assertEquals(AnswerResult.SUCCESS_HOMOPHONE, result)
     }
 
     @Test
     fun getSuccess_comment() {
-        val context = QuizContext(Quiz(listOf()), getLanguage())
-        val result = context.getSuccess(QuizItem("Q?", "Answer (comment)", ""), "answer")
+        val context = QuizContext(Quiz(listOf(QuizItem("Q?", "Answer (comment)", ""))), getLanguage())
+        context.nextItem()
+        context.setAnswer("answer")
+        val result = context.checkSuccess()
         assertEquals(AnswerResult.SUCCESS, result)
     }
 
     @Test
     fun getSuccess_multipleAnswers() {
-        val context = QuizContext(Quiz(listOf()), getLanguage())
-        val result = context.getSuccess(QuizItem("Q?", "Answer1 / Answer2", ""), "answer2")
+        val context = QuizContext(Quiz(listOf(QuizItem("Q?", "Answer1 / Answer2", ""))), getLanguage())
+        context.nextItem()
+        context.setAnswer("answer2")
+        val result = context.checkSuccess()
         assertEquals(AnswerResult.SUCCESS, result)
     }
 
     @Test
     fun getSuccess_multipleAnswers_homophone() {
-        val context = QuizContext(Quiz(listOf()), getLanguage())
-        val result = context.getSuccess(QuizItem("Q?", "pie / pye", ""), "pye")
+        val context = QuizContext(Quiz(listOf(QuizItem("Q?", "pie / pye", ""))), getLanguage())
+        context.nextItem()
+        context.setAnswer("pye")
+        val result = context.checkSuccess()
         assertEquals(AnswerResult.SUCCESS, result)
     }
 
     @Test
     fun getSuccess_alternative() {
-        val context = QuizContext(Quiz(listOf()), getLanguage())
         val item = QuizItem("Q?", "A[n] Answer", "")
-        assertEquals(AnswerResult.SUCCESS, context.getSuccess(item, "an answer"))
-        assertEquals(AnswerResult.SUCCESS, context.getSuccess(item, "a answer"))
+        val context = QuizContext(Quiz(listOf(item)), getLanguage())
+        context.setAnswer("an answer")
+        assertEquals(AnswerResult.SUCCESS, context.checkSuccess())
+        context.setAnswer("a answer")
+        assertEquals(AnswerResult.SUCCESS, context.checkSuccess())
     }
 
 
