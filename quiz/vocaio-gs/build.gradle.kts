@@ -10,6 +10,14 @@ dependencies {
     // tests
     testImplementation(kotlin("test"))
 }
+tasks.build {
+    dependsOn("checkApikeyFile")
+}
+tasks.register("checkApikeyFile") {
+  doFirst {
+    if (!File("./src/main/resources/jal/voca/lang/io/apikey").exists()) throw RuntimeException("apikey file does not exist")
+  }
+}
 
 tasks.test {
     useJUnitPlatform()
