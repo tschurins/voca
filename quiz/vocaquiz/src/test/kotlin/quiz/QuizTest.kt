@@ -38,4 +38,15 @@ class QuizTest {
         assertEquals(2, quiz.items.size)
     }
 
+    @Test
+    fun createQuiz_weighted() {
+        val words = mapOf(
+            Translation(Word("A1", TypeInfo()), Word("B1", TypeInfo())) to 1,
+            Translation(Word("A2", TypeInfo()), Word("B2", TypeInfo())) to 2,
+            Translation(Word("A3", TypeInfo()), Word("B3", TypeInfo())) to 3,
+        )
+        assertEquals(6, Quiz.getTotal(words))
+        assertEquals("A2", Quiz.getWord(words, 3).word.word)
+    }
+
 }

@@ -7,21 +7,31 @@ data class QuizItem(val question: String, val answer: String, val moreInfo: Stri
 
 data class Quiz(val items: List<QuizItem>) {
     companion object {
-        private val random = Random()
+        private var random = Random()
 
-        fun newQuiz(dico: Dictionary, category: WordCategory?, fromWordToTranslation: Boolean) : Quiz {
-            val allWords = if (category == null) dico.allWords() else category.words
-            return Quiz(getItems(dico, allWords, fromWordToTranslation))
+        // for testing purposes
+        fun setRandom(random: Random) {
+            this.random = random
         }
 
-        private fun getItems(dico: Dictionary, words: List<Translation>, fromWordToTranslation: Boolean) : List<QuizItem> {
-            val wordsToUse = ArrayList(words)
+        fun newQuiz(dico: Dictionary, category: WordCategory?, fromWordToTranslation: Boolean) : Quiz {
+            val allWords = if (category == null) null else toWeightedMap(category.words)
+            return Quiz(getItems(QuizConfig(dico, allWords, fromWordToTranslation)))
+        }
+
+        fun newQuiz(config: QuizConfig) : Quiz {
+            return Quiz(getItems(config))
+        }
+
+        private fun getItems(config: QuizConfig) : List<QuizItem> {
+            val words: Map<Translation, Int> = if (config.words == null) toWeightedMap(config.dico.allWords()) else config.words
+            val wordsToUse = HashMap(words)
             val result: MutableList<QuizItem> = mutableListOf()
-            val max = Math.min(10, words.size)
+            val max = Math.min(config.itemCount, words.size)
             for (i in 0..<max) {
-                val index = random.nextInt(wordsToUse.size)
-                val wt = wordsToUse[index]
-                wordsToUse.removeAt(index)
+                val index = random.nextInt(getTotal(wordsToUse))
+                val wt = getWord(wordsToUse, index)
+                wordsToUse.remove(wt)
                 val word = wt.word
                 val translation = wt.translation
                 val moreInfo: MutableList<String> = mutableListOf()
@@ -46,9 +56,9 @@ data class Quiz(val items: List<QuizItem>) {
                         moreInfo.add("original: " + WordParts(word.word).noComment())
                     }
 
-                    val nounWord = dico.wordLanguage.getWord(word, WordForm(wordCase, cardinality), articleType)
-                    val nounTranslation = dico.translationLanguage.getWord(translation, WordForm(wordCase, cardinality), articleType)
-                    if (fromWordToTranslation) {
+                    val nounWord = config.dico.wordLanguage.getWord(word, WordForm(wordCase, cardinality), articleType)
+                    val nounTranslation = config.dico.translationLanguage.getWord(translation, WordForm(wordCase, cardinality), articleType)
+                    if (config.fromWordToTranslation) {
                         fromWord = nounWord
                         toWord = nounTranslation
                     } else {
@@ -57,7 +67,7 @@ data class Quiz(val items: List<QuizItem>) {
                     }
 
                 } else {
-                    if (fromWordToTranslation) {
+                    if (config.fromWordToTranslation) {
                         fromWord = word.word
                         toWord = translation.word
                     } else {
@@ -69,6 +79,25 @@ data class Quiz(val items: List<QuizItem>) {
             }
             return result
         }
+
+        private fun toWeightedMap(words: List<Translation>) : Map<Translation, Int> {
+            return words.map { it to 1 }.toMap()
+        }
+
+        fun getTotal(wordsToUse: Map<Translation, Int>) : Int {
+            return wordsToUse.values.sum()
+        }
+
+        fun getWord(wordsToUse: Map<Translation, Int>, index: Int) : Translation {
+            var count: Int = 0
+            for (entry in wordsToUse.entries.iterator()) {
+                count += entry.value
+                if (index <= count) {
+                    return entry.key
+                }
+            }
+            throw RuntimeException("value at index " + index + " not found in " + wordsToUse)
+        } 
 
         private fun getQuestionCardinality(word: Word): Cardinality {
             if (word.cardinality != null) {
@@ -102,3 +131,9 @@ class Score {
         total++
     }
 }
+
+data class QuizConfig(
+    val dico: Dictionary, 
+    val words: Map<Translation, Int>? = null, 
+    val fromWordToTranslation: Boolean,
+    val itemCount: Int = 10)
