@@ -6,6 +6,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -66,18 +67,23 @@ class QuizActivity : ComponentActivity() {
                 }
             }
             State.ANSWER -> {
-                Answer(context.currentItem!!, context, context.currentAnswer!!, modifier) {
-                    if (context.hasNextItem()) {
-                        context.nextItem()
-                        state = State.QUESTION
-                    } else {
+                Answer(context.currentItem!!, context, context.currentAnswer!!, modifier,
+                    nextAction = {
+                        if (context.hasNextItem()) {
+                            context.nextItem()
+                            state = State.QUESTION
+                        } else {
+                            state = State.RESULT
+                        }
+                    },
+                    endAction = {
                         state = State.RESULT
                     }
-                }
+                )
             }
             State.RESULT -> {
                 Result(context, modifier) {
-                    backToMain()
+                    backToMenu()
                 }
             }
         }
@@ -137,7 +143,7 @@ class QuizActivity : ComponentActivity() {
 
 
     @Composable
-    fun Answer(item: QuizItem, context: QuizContext, givenAnswer: String, modifier: Modifier = Modifier, nextAction: () -> Unit) {
+    fun Answer(item: QuizItem, context: QuizContext, givenAnswer: String, modifier: Modifier = Modifier, nextAction: () -> Unit, endAction: () -> Unit) {
         Column(modifier = modifier
                 .fillMaxSize()) {
             Text(item.question, modifier = Modifier.padding(4.dp))
@@ -157,10 +163,20 @@ class QuizActivity : ComponentActivity() {
                     Text(text = item.answer, modifier = Modifier.padding(4.dp))
                 }
             }
-            Button(onClick = {
-                nextAction()
-            }, modifier = Modifier.padding(4.dp)) {
-                Text("Next")
+            Row (modifier = Modifier) {
+                if (context.hasNextItem()) {
+                    Button(onClick = {
+                        nextAction()
+                    }, modifier = Modifier.padding(4.dp)) {
+                        Text("Next")
+                    }
+                }
+                Button(onClick = {
+                    endAction()
+                }, modifier = Modifier.padding(4.dp)) {
+                    Text("End")
+                }
+
             }
         }
     }
@@ -184,9 +200,9 @@ class QuizActivity : ComponentActivity() {
         }
     }
 
-    private fun backToMain() {
+    private fun backToMenu() {
         // restart the main activity as top of the back stack.
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, CategoryMenuActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
         startActivity(intent)
     }

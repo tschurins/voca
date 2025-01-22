@@ -23,6 +23,14 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ConfigurationActivity"
+            android:exported="false"
+            />
+        <activity
+            android:name=".CategoryMenuActivity"
+            android:exported="false"
+            />
+        <activity
             android:name=".QuizActivity"
             android:exported="false"
             />
