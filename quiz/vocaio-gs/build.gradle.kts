@@ -14,8 +14,10 @@ tasks.build {
     dependsOn("checkApikeyFile")
 }
 tasks.register("checkApikeyFile") {
+  val projectDir = project.projectDir
   doFirst {
-    if (!File("./src/main/resources/jal/voca/lang/io/apikey").exists()) throw RuntimeException("apikey file does not exist")
+    val file = File(projectDir, "src/main/resources/jal/voca/lang/io/apikey")
+    if (!file.exists()) throw RuntimeException("apikey file does not exist at " + file.absolutePath)
   }
 }
 

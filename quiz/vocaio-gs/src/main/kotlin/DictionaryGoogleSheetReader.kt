@@ -81,7 +81,7 @@ class DictionaryGoogleSheetReader(
         return range.substring(0, bang)
     }
 
-    fun readForms() : List<WordCasesPerGender> {
+    fun readForms() : WordForms {
         val sheetData = service.spreadsheets().values().get(spreadsheetId, "Forms").execute().getValues()
 
         val formsResult: MutableList<WordCasesPerGender> = mutableListOf()
@@ -109,7 +109,7 @@ class DictionaryGoogleSheetReader(
                 formsResult.add(WordCasesPerGender(gender!!, readAllForms(sheetData, row)))
             }
         }
-        return formsResult
+        return WordForms(formsResult, articlesResult)
     }
 
     private fun readAllForms(sheetData: List<List<Any>>, row: Int) : Map<WordForm, String> {

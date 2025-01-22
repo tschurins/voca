@@ -3,7 +3,7 @@ set -e
 
 mkdir -p build/run
 cd build/run
-rm vocaio -rf
-unzip ../distributions/vocaio.zip
-cd vocaio/bin
-./vocaio jal.voca.lang.io.ExcelReaderMainKt ../../../../Duo-G.xlsx ../../../../../vocaquiz/src/main/resources/jal/voca/lang/
+rm vocaio-excel -rf
+unzip ../distributions/vocaio-excel.zip
+cd vocaio-excel/bin
+./vocaio-excel jal.voca.lang.io.ExcelReaderMainKt ../../../../Duo-G.xlsx ../../../../../vocaquiz/src/main/resources/jal/voca/lang/

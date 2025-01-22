@@ -52,7 +52,7 @@ Food|νερό|water|n(n,,)
 Food|ρύζι|rice|n(n,,)
 Food|αβοκάντo|avocado|n(n,,)
 Food|σνακ|snack|n(n,,)
-Food|κουσκούς|couscous|n(n,,)
+Food|κουσκούς|couscous|n(n,s,)
 Food|τοστ|toast|n(n,s,)
 Food|μάνγκο|mango|n(n,,)
 Food|γύρος|gyro|n(m,,)
@@ -265,8 +265,8 @@ Conjunctions|λόγω|because / due to / because of / the reason behind|
 Conjunctions|εκτός (από)|except|
 Conjunctions|κοντά (σε)|nearby / close to|
 Adjectives|ροζ|pink|a
-Adjectives|μεγάλο|big / tall|a
-Adjectives|μικρό|little / tiny / small|a
+Adjectives|μεγάλος|big / tall|a
+Adjectives|μικρός|little / tiny / small|a
 Adjectives|καλά|fine / well / good|a
 Adjectives|νόστιμος|tasty / delicious|a
 Adjectives|φρέσκο|fresh|a
@@ -291,6 +291,39 @@ Adjectives|σκούρο πράσινο|dark green|a
 Adjectives|κρύο|cold|a
 Adjectives|σιννεφιά|cloudy|a
 Adjectives|ζέστη|Heat / hot|a
+Adjectives|γενικός|general|a
+Adjectives|τοπικός|local|a
+Adjectives|πραγματικός|real|a
+Adjectives|επόμενος|next|a
+Adjectives|ιδιαίτερος|special|a
+Adjectives|κουρασμένος|tired|a
+Adjectives|υπέροχος|wonderful|a
+Adjectives|σκέτος|ordinary|a
+Adjectives|δίγλωσσος|bilingual|a
+Adjectives|διαφορετικός|different|a
+Adjectives|πρόσφατος|recent|a
+Adjectives|εύκολος|easy|a
+Adjectives|προσωπικός|personal|a
+Adjectives|αριστερός|left|a
+Adjectives|βασικός|basic|a
+Adjectives|δύσκολος|difficult|a
+Adjectives|επίσημος|offical / formal|a
+Adjectives|κλειστός|closed|a
+Adjectives|ωραίος|nice|a
+Adjectives|νόμιμος|legal|a
+Adjectives|σημαντικός|important|a
+Adjectives|τελικός|final|a
+Adjectives|ολόκληρος|whole|a
+Adjectives|απαραίτητος|necessary|a
+Adjectives|φυσιολογικός|normal|a
+Adjectives|στρατιωτικός|military|a
+Adjectives|εξαιρετικός|excellent / great|a
+Adjectives|τέλειος|perfect|a
+Adjectives|διάσημος|famous|a
+Adjectives|ξύλινος|wooden|a
+Adjectives|ζοντανός|alive|a
+Adjectives|γρήγορος|fast|a
+Adjectives|ακριβός|expensive|a
 Animals|ζώο|animal|n(n,,)
 Animals|κατοικίδιο|pet|n(n,,)
 Animals|κουτάβι|puppy|n(n,,)
@@ -387,3 +420,22 @@ Numbers|πέμπτος|fifth|
 Numbers|τελευταίος|last|
 Numbers|δις|twice|
 Numbers|πολλάκις|many times|
+time|απόγευμα|afternoon / evening|n(n,,)
+time|νύχτα|night / tonight|n(f,,)
+time|ημέρα|day|
+time|βράδυ|night / evening|
+time|αύριο|tomorrow|
+time|απόψε|tonight|
+time|σήμερα|today|
+time|πρωί|morning|n(n,,)
+time|δευτέρα|Monday|n(f,,)
+time|τρίτη|Tuesday|n(f,,)
+time|τετάρτη|Wednesday|n(f,,)
+time|πέμπτη|Thursday|n(f,,)
+time|παρασκευή|Friday|n(f,,)
+time|σάββατο|Saturday|n(n,,)
+time|Κυριακή|Sunday|n(f,,)
+time|αρχή|start / beginning|n(f,,)
+time|ώρα|time / hour|n(f,,)
+time|μεσημέρι|noon / afternoon|n(n,,)
+time|τέλος|end|n(n,,)

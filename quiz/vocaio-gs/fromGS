@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+
+mkdir -p build/run
+cd build/run
+rm vocaio-gs -rf
+unzip ../distributions/vocaio-gs.zip
+cd vocaio-gs/bin
+./vocaio-gs jal.voca.lang.io.GoogleSheetReaderMainKt ../../../../../vocaquiz/src/main/resources/jal/voca/lang/
