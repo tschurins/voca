@@ -1,441 +1,467 @@
-Verbs|μένω|I stay / I live|v
-Verbs|μιλάω|I speak|v
-Verbs|τρώω|I eat|v
-Verbs|πίνω|I drink|v
-Verbs|έχω|I have|v
-Verbs|είμαι|I am|v
-Verbs|διαβάζω|I read|v
-Verbs|φοράω|I wear|v
-Verbs|ζω|I live|v
-Verbs|αγαπάω|I love|v
-Verbs|δίνω|I give|v
-Verbs|βλέπω|I watch / I see|v
-Verbs|μπορώ|I can|v
-Verbs|υπάρχω|I exist|v
-Verbs|γράφω|I write|v
-Verbs|κολυμπώ|I swim|v
-Verbs|περπατώ|I walk|v
-Verbs|τρέχω|I run|v
-Verbs|αγοράζω|I buy|v
-Verbs|θέλω|I want|v
-Verbs|μαγειρεύω|I cook|v
-Verbs|αφήνω|I leave / I let go of|v
-Verbs|πληρώνω|I pay|v
-Verbs|τραγουδώ|I sing|v
-Verbs|πηγαίνω|I go|v
-Verbs|παίζω|I play|v
-Verbs|αρέσω|I like (is liked by)|v
-Verbs|παίρνω|I take|v
-Verbs|χορεύω|I dance|v
-Verbs|αγγίζω|I touch|v
-Verbs|ξέρω|I know|v
-Verbs|απαγορεύω|I forbid|v
-Verbs|χρησιμοποιώ|I use|v
-Verbs|βοηθώ|I help|v
-Verbs|λέω|I say / I tell|v
-Verbs|ακούω|I listen / I hear|v
-Verbs|φέρνω|I bring|v
-Verbs|δουλεύω|I work|v
-Verbs|φτιάχνω|I make|v
-Verbs|βάζω|I put|v
-Verbs|βρίσκω|I find|v
-Verbs|κάνω|I make / I do|v
-Verbs|πέφτω|I fall|v
-Verbs|δείχνω|I show|v
-Verbs|σχεδυάζω|I design / I draw / I sketch|v
-Verbs|νικάω|I win|v
-Verbs|καθαρίζω|I clean|v
-Verbs|βρέχει|It rains|v
-Verbs|χιονίζει|It snows|v
-Food|καρότο|carrot|n(n,,)
-Food|νερό|water|n(n,,)
-Food|ρύζι|rice|n(n,,)
-Food|αβοκάντo|avocado|n(n,,)
-Food|σνακ|snack|n(n,,)
-Food|κουσκούς|couscous|n(n,s,)
-Food|τοστ|toast|n(n,s,)
-Food|μάνγκο|mango|n(n,,)
-Food|γύρος|gyro|n(m,,)
-Food|λεμόνι|lemon|n(n,,)
-Food|πάπρικα|paprika|n(f,,)
-Food|σούπα|soup|n(f,,)
-Food|καφές|coffee|n(m,,)
-Food|ψωμί|bread|n(n,,)
-Food|ψάρι|fish|n(n,,)
-Food|ξίδι|vinegar|n(n,,)
-Food|μήλο|apple|n(n,,)
-Food|γάλα|milk|n(n,s,)
-Food|πορτοκάλι|orange|n(n,,)
-Food|κοτόπουλο|chicken|n(n,,)
-Food|αυγό|egg|n(n,,)
-Food|κρασί|wine|n(n,,)
-Food|ποτήρι|glass / cup|n(n,,)
-Food|πιάτο|plate / dish|n(n,,)
-Food|σκόρδο|garlic|n(n,,)
-Food|πρωινό|breakfast|n(n,,)
-Food|μεσημεριανό|lunch|n(n,,)
-Food|δείπνο|dinner / supper|n(n,,)
-Food|επιδόρπιο|dessert|n(n,,)
-Food|γεύμα|meal|n(n,,)
-Food|νόστιμος|tasty / delicious|a
-Food|ζάχαρη|sugar|n(f,,)
-Food|φρούτο|fruit|n(n,,)
-Food|μπίρα|beer|n(f,,)
-Food|φράουλα|strawberry|n(f,,)
-Food|τυρί|cheese|n(n,,)
-Food|χυμός|juice|n(m,,)
-Food|ντομάτα|tomato|n(f,,)
-Food|ζυμαρικά|pasta|n(f,pl,)
-Food|κρεμμύδι|onion|n(n,,)
-Food|αλάτι|salt|n(n,,)
-Food|πιπέρι|pepper|n(n,,)
-Food|φαγητό|food|n(n,,)
-Food|σαλάτα|salad|n(f,,)
-Food|αγγούρι|cucumber|n(n,,)
-Food|τσάι|tea|n(n,,)
-Food|κρέας|meat|n(n,,)
-Food|κεράσι|cherry|n(n,,)
-Food|χοιρινό|pork|n(n,s,)
-Food|βοδινό|beef|n(n,s,)
-Food|λουκάνικο|sausage|n(n,,)
-Food|μπριζόλα|steak|n(f,,)
-Food|κεφτές|meatballs|n(n,pl,)
-Food|ελαιόλαδο|olive oil|n(n,,)
-Food|χορτοφάγος|vegetarian|n(m,,)
-Food|πεπόνι|melon|n(n,,)
-Food|καρπούζι|watermelon|n(n,,)
-Food|πατάτα|potato|n(f,,)
-Food|παγωτό|ice cream|n(n,,)
-Food|αχλάδι|pear|n(n,,)
-Food|πίτα|pita / pie|n(f,,)
-Food|σοκολάτα|chocolate|n(f,,)
-Food|ποδάκινο|peach|n(n,,)
-Food|πάγος|ice|n(m,,)
-Food|φρέσκο|fresh|a
-Food|μπισκότο|biscuit / cookie|n(n,,)
-Food|γλυκό|sweet|n(n,,)
-Food|συνταγή|recipe / formula|n(f,,)
-Persons|μαμά|mum|n(f,,άδες)
-Persons|μπαμπάς|dad|n(m,s,)
-Persons|άντρας|man|n(m,,)
-Persons|γυναίκα|woman|n(f,,)
-Persons|αρχιτέκτονας|architect|n(m,,)
-Persons|κορίτσι|girl|n(n,,)
-Persons|αγόρι|boy|n(n,,)
-Persons|παιδί|child|n(n,,)
-Persons|μητέρα|mother|n(f,,)
-Persons|πατέρας|father|n(m,,)
-Persons|γονιός|parent|n(m,,)
-Persons|μωρό|baby|n(n,,)
-Persons|αδελφός|brother|n(m,,)
-Persons|αδελφή|sister|n(f,,)
-Persons|αδέρφια|siblings|n(n,pl,)
-Persons|γιος|son|n(m,,)
-Persons|κόρη|daughter|n(f,,)
-Persons|θείος|oncle|n(m,,)
-Persons|θεία|aunt|n(f,,)
-Persons|σύζυγος|husband|n(m,,)
-Persons|σύζυγος|wife|n(f,,)
-Persons|οικογένεια|family|n(f,,)
-Persons|συγγενής|relative|n(m,,)
-Persons|γάμος|marriage|n(m,,)
-Persons|ξάδερφος|cousin|n(m,,)
-Persons|ξαδέρφη|cousine|n(f,,)
-Persons|νονά|godmother|n(f,,)
-Persons|νονός|godfather|n(m,,)
-Persons|εγγονός|grandchild / grandson|n(m,,)
-Persons|εγγονή|granddaughter|n(f,,)
-Persons|γιαγιά|grandmother|n(f,,άδες)
-Persons|παππούς|grandfather|n(m,,ούδες)
-Persons|φίλος|friend|n(m,,)
-Persons|πρόσωπο|face|n(n,,)
-Persons|μάτι|eye|n(n,,)
-Persons|μαλλί|hair|n(n,,)
-Persons|μύτη|nose|n(f,,)
-Persons|χέρι|arm / hand|n(n,,)
-Persons|αυτί|ear|n(n,,)
-Persons|χείλος|lip|n(n,,)
-Persons|στόμα|mouth|n(n,,)
-Persons|πόδι|foot / leg|n(n,,)
-Persons|νέος|young / new|a
-Persons|χοντρός|fat|a
-Persons|αδύνατος|thin|a
-Persons|όμορφος|beautiful / handsome / pretty|a
-Persons|άσχημος|ugly / nasty|a
-Persons|κοντός|short|a
-Persons|μελαχρινός|dart-haired|a
-Persons|ψηλός|tall|a
-Persons|αδύναμος|weak / powerless|a
-Persons|δυνατός|strong / powerful|a
-Persons|βρώμικος|dirty|a
-Persons|καθαρός|clean / clear|a
-Expression|ναι|yes|
-Expression|όχι|no|
-Expression|γεια|Hello / Bye|
-Expression|γεια σου|Hello (to one person)|
-Expression|γεια σας|Hello (to multiple persons / formal)|
-Expression|Χαίρετε|Hello|
-Expression|θα ήθελα|I would like|
-Expression|παρακαλώ|please|
-Expression|ευχαριστώ|Thank you|
-Expression|πώς είσαι|How are you (singular)|
-Expression|με συγχωρείτε|Excuse me|
-Expression|συγγνώμη|Sorry / Excuse me|
-Expression|καλημέρα|Good morning / Good day|
-Expression|καλησπέρα|Good afternoon|
-Expression|Καληνύχτα|Good night|
-Expression|τα λέμε|See you|
-Expression|χάρηκα|Nice to meet you|
-Expression|με λένε|My name is|
-Expression|ορίστε|Here you are|
-Expression|αντίο|Goodbye|
-Expression|Πώς σε λένε|What is your name|
-Expression|εντάξει|Alright / OK|
-Expression|μου αρέσει το παγωτό|I like the ice cream|
-Expression|βρέχει|It rains|v
-Expression|χιονίζει|It snows|v
-Other|μίνι μάρκετ|mini market|n(n,,)
-Other|βάζο|vase|n(n,,)
-Other|βίντεο|video|n(n,,)
-Other|μουσείο|museum|n(n,,)
-Other|σινεμά|cinema|n(n,,)
-Other|ντίσκο|disco|n(f,,)
-Other|χολ|hall|n(f,s,)
-Other|τηλέφωνο|phone|n(n,,)
-Other|εφημερίδα|newspaper|n(f,,)
-Other|βιβλίο|book|n(n,,)
-Other|ελληνικά|Greek|
-Other|αγγλικά|English|
-Other|γαλλικά|French|
-Other|ολλανδικά|Dutch|
-Other|Ευρώπη|Europe|
-Other|Ελλάδα|Greece|
-Other|Βέλγιο|Belgium|
-Other|Βέλγος|Belgian|n(m,,)
-Other|Βελγίδα|Belgian|n(f,,)
-Other|ερώτηση|question|n(f,,)
-Other|απάντηση|answer|n(f,,)
-Other|τώρα|now|
-Other|χρώμα|colour|n(n,,)
-Other|καιρός|weather / time|n(m,,)
-Other|ήλιος|sun|n(m,,)
-Other|ομίχλη|fog|n(f,,)
-Other|αέρας|wind|n(m,,)
-Other|χρονών|years old|
-Conjunctions|και|and|
-Conjunctions|σε|to|
-Conjunctions|στο / στον|to the / in the|
-Conjunctions|με|with|
-Conjunctions|πολύ|a lot of / very much|
-Conjunctions|δεν|not / do not|
-Conjunctions|λίγο|a bit of / a little|
-Conjunctions|από|from|
-Conjunctions|δικός / δική / δικό|own (my, your, …)|
-Conjunctions|τι|what|
-Conjunctions|πότε|when|
-Conjunctions|γιατί|why / because|
-Conjunctions|πού|where|
-Conjunctions|πως|how|
-Conjunctions|πόσο / πόσα|how many / how much|
-Conjunctions|ποιος|who / which / what (male)|
-Conjunctions|τίνος|whose|
-Conjunctions|ποιανού|whose (male/neutral owner)|
-Conjunctions|ποιανής|whose (female owner)|
-Conjunctions|ποιανών|whose (many owners)|
-Conjunctions|όλοι|all|
-Conjunctions|εκείνος|that|
-Conjunctions|ανάμεσα (σε)|among / between|
-Conjunctions|για|for|
-Conjunctions|σαν|like|
-Conjunctions|δίπλα (σε)|next to / near by|
-Conjunctions|μέσα (σε)|inside / into / in|
-Conjunctions|πίσω (από)|behind|
-Conjunctions|εξαιτίας|because of / due to|
-Conjunctions|όπως|like / as / such as|
-Conjunctions|έξω (από)|out / outside|
-Conjunctions|πάνω (από)|on / over / on top of|
-Conjunctions|χωρίς|without|
-Conjunctions|κάτω (σε)|down|
-Conjunctions|μετά (από)|after / then|
-Conjunctions|μεταξύ|between|
-Conjunctions|αντί (για)|instead|
-Conjunctions|προς|towards / to|
-Conjunctions|κατά|against / by / according|
-Conjunctions|λόγω|because / due to / because of / the reason behind|
-Conjunctions|εκτός (από)|except|
-Conjunctions|κοντά (σε)|nearby / close to|
-Adjectives|ροζ|pink|a
-Adjectives|μεγάλος|big / tall|a
-Adjectives|μικρός|little / tiny / small|a
-Adjectives|καλά|fine / well / good|a
-Adjectives|νόστιμος|tasty / delicious|a
-Adjectives|φρέσκο|fresh|a
-Adjectives|μάλλινος|woolen|a
-Adjectives|δερμάτινος|leather|a
-Adjectives|μαύρο|black|a
-Adjectives|καφέ|brown|a
-Adjectives|πορτοκαλί|orange|a
-Adjectives|πράσινο|green|a
-Adjectives|γαλάζιο|light blue|a
-Adjectives|μπλε|blue|a
-Adjectives|μοβ|purple|a
-Adjectives|Λευκό / άσπρο|white|a
-Adjectives|Κόκκινο / ερυθρό|red|a
-Adjectives|γκρι|grey|a
-Adjectives|κίτρινο|yellow|a
-Adjectives|πολύχρωμος|multi;colored|a
-Adjectives|ασπρόμαυρος|black and white|a
-Adjectives|ανοιχρός κόκκινο|light red|a
-Adjectives|βαθύ μπλε|deep blue|a
-Adjectives|σκούρο πράσινο|dark green|a
-Adjectives|κρύο|cold|a
-Adjectives|σιννεφιά|cloudy|a
-Adjectives|ζέστη|Heat / hot|a
-Adjectives|γενικός|general|a
-Adjectives|τοπικός|local|a
-Adjectives|πραγματικός|real|a
-Adjectives|επόμενος|next|a
-Adjectives|ιδιαίτερος|special|a
-Adjectives|κουρασμένος|tired|a
-Adjectives|υπέροχος|wonderful|a
-Adjectives|σκέτος|ordinary|a
-Adjectives|δίγλωσσος|bilingual|a
-Adjectives|διαφορετικός|different|a
-Adjectives|πρόσφατος|recent|a
-Adjectives|εύκολος|easy|a
-Adjectives|προσωπικός|personal|a
-Adjectives|αριστερός|left|a
-Adjectives|βασικός|basic|a
-Adjectives|δύσκολος|difficult|a
-Adjectives|επίσημος|offical / formal|a
-Adjectives|κλειστός|closed|a
-Adjectives|ωραίος|nice|a
-Adjectives|νόμιμος|legal|a
-Adjectives|σημαντικός|important|a
-Adjectives|τελικός|final|a
-Adjectives|ολόκληρος|whole|a
-Adjectives|απαραίτητος|necessary|a
-Adjectives|φυσιολογικός|normal|a
-Adjectives|στρατιωτικός|military|a
-Adjectives|εξαιρετικός|excellent / great|a
-Adjectives|τέλειος|perfect|a
-Adjectives|διάσημος|famous|a
-Adjectives|ξύλινος|wooden|a
-Adjectives|ζοντανός|alive|a
-Adjectives|γρήγορος|fast|a
-Adjectives|ακριβός|expensive|a
-Animals|ζώο|animal|n(n,,)
-Animals|κατοικίδιο|pet|n(n,,)
-Animals|κουτάβι|puppy|n(n,,)
-Animals|πουλί|bird|n(n,,)
-Animals|κότα|chicken|n(f,,)
-Animals|πάπια|duck|n(f,,)
-Animals|πελεκάνος|pelican|n(m,,)
-Animals|αετός|eagle|n(m,,)
-Animals|θηλαστικό|mammal|n(n,,)
-Animals|γάτα|cat|n(f,,)
-Animals|άλογο|horse|n(n,,)
-Animals|σκύλος|dog|n(m,,)
-Animals|αρκούδα|bear|n(f,,)
-Animals|ποντίκι|mouse|n(n,,)
-Animals|πίθηκος|ape|n(m,,)
-Animals|καμήλα|camel|n(f,,)
-Animals|καμηλοπάρδαλη|giraffe|n(f,,)
-Animals|χάμστερ|hamster|n(n,,)
-Animals|λιονδάκι|lion|n(n,,)
-Animals|λαγός|hare|n(m,,)
-Animals|αλεπού|fox|n(f,,)
-Animals|λύκος|wolf|n(m,,)
-Animals|τίγρης|tiger|n(f,,)
-Animals|ζέβρα|zebra|n(f,,)
-Animals|ερπετό|reptile|n(n,,)
-Animals|φίδι|snake|n(n,,)
-Animals|χελώνα|turtle|n(f,,)
-Animals|έντομο|insect|n(n,,)
-Animals|πεταλούδα|butterfly|n(f,,)
-Animals|καβούρι|crab|n(n,,)
-Animals|αράχνη|spider|n(f,,)
-Clothes|καπέλο|hat |n(n,,)
-Clothes|φούστα|skirt|n(f,,)
-Clothes|πουκάμισο|shirt|n(n,,)
-Clothes|γάντι|glove|n(n,,)
-Clothes|γραβάτα|tie|n(f,,)
-Clothes|φόρεμα|dress|n(n,,)
-Clothes|παπούτσι|shoe|n(n,,)
-Clothes|παντελόνι|pants|n(n,,)
-Clothes|παλτό|coat|n(n,,)
-Clothes|ρούχο|piece of clothing|n(n,s,)
-Clothes|ρούχα|clothing|n(n,pl,)
-Clothes|μπλούζα|blouse|n(f,,)
-Clothes|κάλτσα|sock|n(f,,)
-Clothes|κουστούμι|suit|n(n,,)
-Clothes|κασκόλ|scarf|n(n,,)
-Clothes|κόσμημα|piece of jewelry|n(n,s,ματα)
-Clothes|κόσμηματα|jewelry|n(n,pl,ματα)
-Clothes|στολή|uniform|n(f,,)
-Clothes|ζώνη|belt|n(f,,)
-Clothes|εσώρουχο|piece of underwear|n(n,s,)
-Clothes|εσώρουχα|underwear|n(n,pl,)
-Clothes|μπότα|boot|n(f,,)
-Clothes|τσέπη|pocket|n(f,,)
-Clothes|πορτοφόλι|wallet|n(n,,)
-Clothes|κοντομάνικο|T-shirt|n(n,,)
-Clothes|μάλλινος|woolen|a
-Clothes|δερμάτινο|leather|a
-Numbers|μηδέν|zero|
-Numbers|ένα|one|
-Numbers|δύο|two|
-Numbers|τρία|three|
-Numbers|τέσσερα|four|
-Numbers|πέντε|five|
-Numbers|έξι|six|
-Numbers|επτά|seven|
-Numbers|οκτώ|eight|
-Numbers|εννέα|nine|
-Numbers|δέκα|ten|
-Numbers|έντεκα|eleven|
-Numbers|δώδεκα|twelve|
-Numbers|δεκαεφτά|seventeen|
-Numbers|είκοσι|twenty|
-Numbers|τριάντα|thirty|
-Numbers|σαράντα|forty|
-Numbers|πενήντα|fifty|
-Numbers|εξήντα|sixty|
-Numbers|εβδομήντα|seventy|
-Numbers|ογδόντα|eighty|
-Numbers|ενενήντα|ninety|
-Numbers|εκατό|hundred|
-Numbers|διακόσιοι|two hundred|
-Numbers|τριακοσιοι|three hundred|
-Numbers|τετρακόσιοι|four hundred|
-Numbers|χίλιοι|thousand|
-Numbers|εκατομμύριο|million|
-Numbers|άπειρο|infinite|
-Numbers|αριθμός / νούμερο|number / numeral / figure|
-Numbers|πρώτος|first|
-Numbers|δεύτερος|second|
-Numbers|τρίτος|third|
-Numbers|τέταρτος|fourth|
-Numbers|πέμπτος|fifth|
-Numbers|τελευταίος|last|
-Numbers|δις|twice|
-Numbers|πολλάκις|many times|
-time|απόγευμα|afternoon / evening|n(n,,)
-time|νύχτα|night / tonight|n(f,,)
-time|ημέρα|day|
-time|βράδυ|night / evening|
-time|αύριο|tomorrow|
-time|απόψε|tonight|
-time|σήμερα|today|
-time|πρωί|morning|n(n,,)
-time|δευτέρα|Monday|n(f,,)
-time|τρίτη|Tuesday|n(f,,)
-time|τετάρτη|Wednesday|n(f,,)
-time|πέμπτη|Thursday|n(f,,)
-time|παρασκευή|Friday|n(f,,)
-time|σάββατο|Saturday|n(n,,)
-time|Κυριακή|Sunday|n(f,,)
-time|αρχή|start / beginning|n(f,,)
-time|ώρα|time / hour|n(f,,)
-time|μεσημέρι|noon / afternoon|n(n,,)
-time|τέλος|end|n(n,,)
+Verbs|S1U4|μένω|I stay / I live|v
+Verbs|S1U7|μιλάω|I speak|v
+Verbs|S1U6|τρώω|I eat|v
+Verbs|S1U6|πίνω|I drink|v
+Verbs|S1U7|έχω|I have|v
+Verbs|S1U1|είμαι|I am|v
+Verbs|S1U7|διαβάζω|I read|v
+Verbs|S1U14|φοράω|I wear|v
+Verbs|S1U12|ζω|I live|v
+Verbs|S2U1|αγαπάω|I love|v
+Verbs|S2U1|δίνω|I give|v
+Verbs|S2U2|βλέπω|I watch / I see|v
+Verbs|S2U2|μπορώ|I can|v
+Verbs|S2U2|υπάρχω|I exist|v
+Verbs|S2U2|γράφω|I write|v
+Verbs|S2U2|κολυμπώ|I swim|v
+Verbs|S2U2|περπατώ|I walk|v
+Verbs|S2U2|τρέχω|I run|v
+Verbs|S2U2|αγοράζω|I buy|v
+Verbs|S2U2|θέλω|I want|v
+Verbs|S2U2|μαγειρεύω|I cook|v
+Verbs|S2U2|αφήνω|I leave / I let go of|v
+Verbs|S2U2|πληρώνω|I pay|v
+Verbs|S2U2|τραγουδώ|I sing|v
+Verbs|S2U2|πηγαίνω|I go|v
+Verbs|S2U2|παίζω|I play|v
+Verbs|S2U2|αρέσω|I like (is liked by)|v
+Verbs|S2U2|παίρνω|I take|v
+Verbs|S2U2|χορεύω|I dance|v
+Verbs|S2U2|αγγίζω|I touch|v
+Verbs|S2U2|ξέρω|I know|v
+Verbs|S2U2|απαγορεύω|I forbid|v
+Verbs|S2U2|χρησιμοποιώ|I use|v
+Verbs|S2U2|βοηθώ|I help|v
+Verbs|S2U2|λέω|I say / I tell|v
+Verbs|S2U2|ακούω|I listen / I hear|v
+Verbs|S2U2|φέρνω|I bring|v
+Verbs|S2U2|δουλεύω|I work|v
+Verbs|S2U2|φτιάχνω|I make|v
+Verbs|S2U2|βάζω|I put|v
+Verbs|S2U2|βρίσκω|I find|v
+Verbs|S1U2|κάνω|I make / I do|v
+Verbs|S2U2|πέφτω|I fall|v
+Verbs|S2U2|δείχνω|I show|v
+Verbs|S2U2|σχεδυάζω|I design / I draw / I sketch|v
+Verbs|S2U2|νικάω|I win|v
+Verbs|S2U2|καθαρίζω|I clean|v
+Expression|S2U7|βρέχει|It rains|v
+Verbs|S2U7|βρέχει|It rains|v
+Expression|S2U7|χιονίζει|It snows|v
+Verbs|S2U7|χιονίζει|It snows|v
+Food|S1U1|καρότο|carrot|n(n,,)
+Food|S1U1|νερό|water|n(n,,)
+Food|S1U1|ρύζι|rice|n(n,,)
+Food|S1U2|αβοκάντo|avocado|n(n,,)
+Food|S1U2|σνακ|snack|n(n,,)
+Food|S1U2|κουσκούς|couscous|n(n,s,)
+Food|S1U2|τοστ|toast|n(n,s,)
+Food|S1U4|μάνγκο|mango|n(n,,)
+Food|S1U4|γύρος|gyro|n(m,,)
+Food|S1U4|λεμόνι|lemon|n(n,,)
+Food|S1U4|πάπρικα|paprika|n(f,,)
+Food|S1U4|σούπα|soup|n(f,,)
+Food|S1U6|καφές|coffee|n(m,,)
+Food|S1U6|ψωμί|bread|n(n,,)
+Food|S1U6|ψάρι|fish|n(n,,)
+Food|S1U10|ξίδι|vinegar|n(n,,)
+Food|S1U10|μήλο|apple|n(n,,)
+Food|S1U10|γάλα|milk|n(n,s,)
+Food|S1U10|πορτοκάλι|orange|n(n,,)
+Food|S1U10|κοτόπουλο|chicken|n(n,,)
+Food|S1U10|αυγό|egg|n(n,,)
+Food|S1U10|κρασί|wine|n(n,,)
+Food|S1U10|ποτήρι|glass / cup|n(n,,)
+Food|S1U10|πιάτο|plate / dish|n(n,,)
+Food|S1U10|σκόρδο|garlic|n(n,,)
+Food|S1U10|πρωινό|breakfast|n(n,,)
+Food|S1U10|μεσημεριανό|lunch|n(n,,)
+Food|S1U10|δείπνο|dinner / supper|n(n,,)
+Food|S1U10|επιδόρπιο|dessert|n(n,,)
+Food|S1U10|γεύμα|meal|n(n,,)
+Adjectives|S1U10|νόστιμος|tasty / delicious|a
+Food|S1U10|νόστιμος|tasty / delicious|a
+Food|S1U10|ζάχαρη|sugar|n(f,,)
+Food|S1U10|φρούτο|fruit|n(n,,)
+Food|S1U10|μπίρα|beer|n(f,,)
+Food|S1U10|φράουλα|strawberry|n(f,,)
+Food|S1U10|τυρί|cheese|n(n,,)
+Food|S1U10|χυμός|juice|n(m,,)
+Food|S1U10|ντομάτα|tomato|n(f,,)
+Food|S1U10|ζυμαρικά|pasta|n(f,pl,)
+Food|S1U10|κρεμμύδι|onion|n(n,,)
+Food|S1U10|αλάτι|salt|n(n,,)
+Food|S1U10|πιπέρι|pepper|n(n,,)
+Food|S1U10|φαγητό|food|n(n,,)
+Food|S1U10|σαλάτα|salad|n(f,,)
+Food|S1U10|αγγούρι|cucumber|n(n,,)
+Food|S1U10|τσάι|tea|n(n,,)
+Food|S1U10|κρέας|meat|n(n,,)
+Food|S1U10|κεράσι|cherry|n(n,,)
+Food|S1U10|χοιρινό|pork|n(n,s,)
+Food|S1U10|βοδινό|beef|n(n,s,)
+Food|S1U10|λουκάνικο|sausage|n(n,,)
+Food|S1U10|μπριζόλα|steak|n(f,,)
+Food|S1U10|κεφτές|meatballs|n(n,pl,)
+Food|S1U10|ελαιόλαδο|olive oil|n(n,,)
+Food|S1U10|χορτοφάγος|vegetarian|n(m,,)
+Food|S1U10|πεπόνι|melon|n(n,,)
+Food|S1U10|καρπούζι|watermelon|n(n,,)
+Food|S1U10|πατάτα|potato|n(f,,)
+Food|S1U10|παγωτό|ice cream|n(n,,)
+Food|S1U10|αχλάδι|pear|n(n,,)
+Food|S1U10|πίτα|pita / pie|n(f,,)
+Food|S1U10|σοκολάτα|chocolate|n(f,,)
+Food|S1U10|ποδάκινο|peach|n(n,,)
+Food|S1U10|πάγος|ice|n(m,,)
+Adjectives|S1U10|φρέσκο|fresh|a
+Food|S1U10|φρέσκο|fresh|a
+Food|S1U10|μπισκότο|biscuit / cookie|n(n,,)
+Food|S1U10|γλυκό|sweet|n(n,,)
+Food|S2U6|συνταγή|recipe / formula|n(f,,)
+Persons|S1U5|μαμά|mum|n(f,,άδες)
+Persons|S1U5|μπαμπάς|dad|n(m,s,)
+Persons|S1U3|άντρας|man|n(m,,)
+Persons|S1U3|γυναίκα|woman|n(f,,)
+Persons|S1U3|αρχιτέκτονας|architect|n(m,,)
+Persons|S1U6|κορίτσι|girl|n(n,,)
+Persons|S1U6|αγόρι|boy|n(n,,)
+Persons|S1U6|παιδί|child|n(n,,)
+Persons|S1U11|μητέρα|mother|n(f,,)
+Persons|S1U11|πατέρας|father|n(m,,)
+Persons|S1U11|γονιός|parent|n(m,,)
+Persons|S1U11|μωρό|baby|n(n,,)
+Persons|S1U11|αδελφός|brother|n(m,,)
+Persons|S1U11|αδελφή|sister|n(f,,)
+Persons|S1U11|αδέρφια|siblings|n(n,pl,)
+Persons|S1U11|γιος|son|n(m,,)
+Persons|S1U11|κόρη|daughter|n(f,,)
+Persons|S1U11|θείος|oncle|n(m,,)
+Persons|S1U11|θεία|aunt|n(f,,)
+Persons|S1U11|σύζυγος (m)|husband|n(m,,)
+Persons|S1U11|σύζυγος (f)|wife|n(f,,)
+Persons|S1U11|οικογένεια|family|n(f,,)
+Persons|S1U11|συγγενής|relative|n(m,,)
+Persons|S1U11|γάμος|marriage|n(m,,)
+Persons|S1U11|ξάδερφος|cousin|n(m,,)
+Persons|S1U11|ξαδέρφη|cousine|n(f,,)
+Persons|S1U11|νονά|godmother|n(f,,)
+Persons|S1U11|νονός|godfather|n(m,,)
+Persons|S1U11|εγγονός|grandchild / grandson|n(m,,)
+Persons|S1U11|εγγονή|granddaughter|n(f,,)
+Persons|S1U11|γιαγιά|grandmother|n(f,,άδες)
+Persons|S1U11|παππούς|grandfather|n(m,,ούδες)
+Persons|S1U13|φίλος|friend|n(m,,)
+Persons|S2U10|πρόσωπο|face|n(n,,)
+Persons|S2U10|μάτι|eye|n(n,,)
+Persons|S2U10|μαλλί|hair|n(n,,)
+Persons|S2U10|μύτη|nose|n(f,,)
+Persons|S2U10|χέρι|arm / hand|n(n,,)
+Persons|S2U10|αυτί|ear|n(n,,)
+Persons|S2U10|χείλος|lip|n(n,,)
+Persons|S2U10|στόμα|mouth|n(n,,)
+Persons|S2U10|πόδι|foot / leg|n(n,,)
+Persons|S2U10|νέος|young / new|a
+Persons|S2U10|χοντρός|fat|a
+Persons|S2U10|αδύνατος|thin|a
+Persons|S2U10|όμορφος|beautiful / handsome / pretty|a
+Persons|S2U10|άσχημος|ugly / nasty|a
+Persons|S2U10|κοντός|short|a
+Persons|S2U10|μελαχρινός|dart-haired|a
+Persons|S2U10|ψηλός|tall|a
+Persons|S2U10|αδύναμος|weak / powerless|a
+Persons|S2U10|δυνατός|strong / powerful|a
+Persons|S2U10|βρώμικος|dirty|a
+Persons|S2U10|καθαρός|clean / clear|a
+Expression|S1U1|ναι|yes|
+Expression|S1U1|όχι|no|
+Expression|S1U4|γεια|Hello / Bye|
+Expression|S1U4|γεια σου|Hello (to one person)|
+Expression|S1U4|γεια σας|Hello (to multiple persons / formal)|
+Expression|S1U4|Χαίρετε|Hello|
+Expression|S1U4|θα ήθελα|I would like|
+Expression|S1U5|παρακαλώ|please|
+Expression|S1U5|ευχαριστώ|Thank you|
+Expression|S1U8|πώς είσαι|How are you (singular)|
+Expression|S1U8|με συγχωρείτε|Excuse me|
+Expression|S1U8|συγγνώμη|Sorry / Excuse me|
+Expression|S1U8|καλημέρα|Good morning / Good day|
+Expression|S1U8|καλησπέρα|Good afternoon|
+Expression|S1U8|Καληνύχτα|Good night|
+Expression|S1U8|τα λέμε|See you|
+Expression|S1U8|χάρηκα|Nice to meet you|
+Expression|S1U8|με λένε|My name is|
+Expression|S1U8|ορίστε|Here you are|
+Expression|S1U8|αντίο|Goodbye|
+Expression|S1U8|Πώς σε λένε|What is your name|
+Expression|S1U8|εντάξει|Alright / OK|
+Expression|S2U2|μου αρέσει το παγωτό|I like the ice cream|
+Other|S1U1|μίνι μάρκετ|mini market|n(n,,)
+Other|S1U1|βάζο|vase|n(n,,)
+Other|S1U2|βίντεο|video|n(n,,)
+Other|S1U2|μουσείο|museum|n(n,,)
+Other|S1U2|σινεμά|cinema|n(n,,)
+Other|S1U2|ντίσκο|disco|n(f,,)
+Other|S1U4|χολ|hall|n(f,s,)
+Other|S1U5|τηλέφωνο|phone|n(n,,)
+Other|S1U7|εφημερίδα|newspaper|n(f,,)
+Other|S1U7|βιβλίο|book|n(n,,)
+Other|S1U7|ελληνικά|Greek|
+Other|S1U7|αγγλικά|English|
+Other|S1U7|γαλλικά|French|
+Other|S1U7|ολλανδικά|Dutch|
+Other|S1U7|Ευρώπη|Europe|
+Other|S1U7|Ελλάδα|Greece|
+Other|S1U7|Βέλγιο|Belgium|
+Other|S1U7|Βέλγος|Belgian (m)|n(m,,)
+Other|S1U7|Βελγίδα|Belgian (f)|n(f,,)
+Other|S1U15|ερώτηση|question|n(f,,)
+Other|S1U15|απάντηση|answer|n(f,,)
+Other|S2U3|χρώμα|colour|n(n,,)
+Other|S2U7|καιρός|weather / time|n(m,,)
+Other|S2U7|ήλιος|sun|n(m,,)
+Other|S2U7|ομίχλη|fog|n(f,,)
+Other|S2U7|αέρας|wind|n(m,,)
+Other|S2U9|χρονών|years old|
+Conjunctions|S1U4|και|and|
+Conjunctions|S1U4|σε|to|
+Conjunctions|S1U4|στο / στον|to the / in the|
+Conjunctions|S1U4|με|with|
+Conjunctions|S1U7|πολύ|a lot of / very much|
+Conjunctions|S1U7|δεν|not / do not|
+Conjunctions|S1U7|λίγο|a bit of / a little|
+Conjunctions|S1U7|από|from|
+Conjunctions|S1U9|δικός / δική / δικό|own (my, your, …)|
+Conjunctions|S1U15|τι|what|
+Conjunctions|S1U15|πότε|when|
+Conjunctions|S1U15|γιατί|why / because|
+Conjunctions|S1U15|πού|where|
+Conjunctions|S1U15|πως|how|
+Conjunctions|S1U15|πόσο / πόσα|how many / how much|
+Conjunctions|S1U15|ποιος|who / which / what (male)|
+Conjunctions|S1U15|τίνος|whose|
+Conjunctions|S1U15|ποιανού|whose (male/neutral owner)|
+Conjunctions|S1U15|ποιανής|whose (female owner)|
+Conjunctions|S1U15|ποιανών|whose (many owners)|
+Conjunctions|S2U4|όλοι|all|
+Conjunctions|S2U4|εκείνος|that|
+Conjunctions|S2U8|ανάμεσα (σε)|among / between|
+Conjunctions|S2U8|για|for|
+Conjunctions|S2U8|σαν|like|
+Conjunctions|S2U8|δίπλα (σε)|next to / near by|
+Conjunctions|S2U8|μέσα (σε)|inside / into / in|
+Conjunctions|S2U8|πίσω (από)|behind|
+Conjunctions|S2U8|εξαιτίας|because of / due to|
+Conjunctions|S2U8|όπως|like / as / such as|
+Conjunctions|S2U8|έξω (από)|out / outside|
+Conjunctions|S2U8|πάνω (από)|on / over / on top of|
+Conjunctions|S2U8|χωρίς|without|
+Conjunctions|S2U8|κάτω (σε)|down|
+Conjunctions|S2U8|μετά (από)|after / then|
+Conjunctions|S2U8|μεταξύ|between|
+Conjunctions|S2U8|αντί (για)|instead|
+Conjunctions|S2U8|προς|towards / to|
+Conjunctions|S2U8|κατά|against / by / according|
+Conjunctions|S2U8|λόγω|because / due to / because of / the reason behind|
+Conjunctions|S2U8|εκτός (από)|except|
+Conjunctions|S2U8|κοντά (σε)|nearby / close to|
+Adjectives|S1U1|ροζ|pink|a
+Adjectives|S1U6|μεγάλος|big / tall|a
+Adjectives|S1U6|μικρός|little / tiny / small|a
+Adjectives|S1U8|καλά|fine / well / good|a
+Clothes|S1U14|μάλλινος|woolen|a
+Adjectives|S1U14|μάλλινος|woolen|a
+Adjectives|S1U14|δερμάτινος|leather|a
+Adjectives|S2U3|μαύρο|black|a
+Adjectives|S2U3|καφέ|brown|a
+Adjectives|S2U3|πορτοκαλί|orange|a
+Adjectives|S2U3|πράσινο|green|a
+Adjectives|S2U3|γαλάζιο|light blue|a
+Adjectives|S2U3|μπλε|blue|a
+Adjectives|S2U3|μοβ|purple|a
+Adjectives|S2U3|Λευκό / άσπρο|white|a
+Adjectives|S2U3|Κόκκινο / ερυθρό|red|a
+Adjectives|S2U3|γκρι|grey|a
+Adjectives|S2U3|κίτρινο|yellow|a
+Adjectives|S2U3|πολύχρωμος|multi;colored|a
+Adjectives|S2U3|ασπρόμαυρος|black and white|a
+Adjectives|S2U3|ανοιχρός κόκκινο|light red|a
+Adjectives|S2U3|βαθύ μπλε|deep blue|a
+Adjectives|S2U3|σκούρο πράσινο|dark green|a
+Adjectives|S2U7|κρύο|cold|a
+Adjectives|S2U7|σιννεφιά|cloudy|a
+Adjectives|S2U7|ζέστη|Heat / hot|a
+Adjectives|S2U11|γενικός|general|a
+Adjectives|S2U11|τοπικός|local|a
+Adjectives|S2U11|πραγματικός|real|a
+Adjectives|S2U11|επόμενος|next|a
+Adjectives|S2U11|ιδιαίτερος|special|a
+Adjectives|S2U11|κουρασμένος|tired|a
+Adjectives|S2U11|υπέροχος|wonderful|a
+Adjectives|S2U11|σκέτος|ordinary|a
+Adjectives|S2U11|δίγλωσσος|bilingual|a
+Adjectives|S2U11|διαφορετικός|different|a
+Adjectives|S2U11|πρόσφατος|recent|a
+Adjectives|S2U11|εύκολος|easy|a
+Adjectives|S2U11|προσωπικός|personal|a
+Adjectives|S2U11|αριστερός|left|a
+Adjectives|S2U11|βασικός|basic|a
+Adjectives|S2U11|δύσκολος|difficult|a
+Adjectives|S2U11|επίσημος|offical / formal|a
+Adjectives|S2U11|κλειστός|closed|a
+Adjectives|S2U11|ωραίος|nice|a
+Adjectives|S2U11|νόμιμος|legal|a
+Adjectives|S2U11|σημαντικός|important|a
+Adjectives|S2U11|τελικός|final|a
+Adjectives|S2U11|ολόκληρος|whole|a
+Adjectives|S2U11|απαραίτητος|necessary|a
+Adjectives|S2U11|φυσιολογικός|normal|a
+Adjectives|S2U11|στρατιωτικός|military|a
+Adjectives|S2U11|εξαιρετικός|excellent / great|a
+Adjectives|S2U11|τέλειος|perfect|a
+Adjectives|S2U11|διάσημος|famous|a
+Adjectives|S2U11|ξύλινος|wooden|a
+Adjectives|S2U11|ζοντανός|alive|a
+Adjectives|S2U11|γρήγορος|fast|a
+Adjectives|S2U11|ακριβός|expensive|a
+Animals|S1U12|ζώο|animal|n(n,,)
+Animals|S1U12|κατοικίδιο|pet|n(n,,)
+Animals|S1U12|κουτάβι|puppy|n(n,,)
+Animals|S1U12|πουλί|bird|n(n,,)
+Animals|S1U12|κότα|chicken|n(f,,)
+Animals|S1U12|πάπια|duck|n(f,,)
+Animals|S1U12|πελεκάνος|pelican|n(m,,)
+Animals|S1U12|αετός|eagle|n(m,,)
+Animals|S1U12|θηλαστικό|mammal|n(n,,)
+Animals|S1U12|γάτα|cat|n(f,,)
+Animals|S1U12|άλογο|horse|n(n,,)
+Animals|S1U12|σκύλος|dog|n(m,,)
+Animals|S1U12|αρκούδα|bear|n(f,,)
+Animals|S1U12|ποντίκι|mouse|n(n,,)
+Animals|S1U12|πίθηκος|ape|n(m,,)
+Animals|S1U12|καμήλα|camel|n(f,,)
+Animals|S1U12|καμηλοπάρδαλη|giraffe|n(f,,)
+Animals|S1U12|χάμστερ|hamster|n(n,,)
+Animals|S1U12|λιονδάκι|lion|n(n,,)
+Animals|S1U12|λαγός|hare|n(m,,)
+Animals|S1U12|αλεπού|fox|n(f,,)
+Animals|S1U12|λύκος|wolf|n(m,,)
+Animals|S1U12|τίγρης|tiger|n(f,,)
+Animals|S1U12|ζέβρα|zebra|n(f,,)
+Animals|S1U12|ερπετό|reptile|n(n,,)
+Animals|S1U12|φίδι|snake|n(n,,)
+Animals|S1U12|χελώνα|turtle|n(f,,)
+Animals|S1U12|έντομο|insect|n(n,,)
+Animals|S1U12|πεταλούδα|butterfly|n(f,,)
+Animals|S1U12|καβούρι|crab|n(n,,)
+Animals|S1U12|αράχνη|spider|n(f,,)
+Clothes|S1U14|καπέλο|hat |n(n,,)
+Clothes|S1U14|φούστα|skirt|n(f,,)
+Clothes|S1U14|πουκάμισο|shirt|n(n,,)
+Clothes|S1U14|γάντι|glove|n(n,,)
+Clothes|S1U14|γραβάτα|tie|n(f,,)
+Clothes|S1U14|φόρεμα|dress|n(n,,)
+Clothes|S1U14|παπούτσι|shoe|n(n,,)
+Clothes|S1U14|παντελόνι|pants|n(n,,)
+Clothes|S1U14|παλτό|coat|n(n,,)
+Clothes|S1U14|ρούχο|piece of clothing|n(n,s,)
+Clothes|S1U14|ρούχα|clothing|n(n,pl,)
+Clothes|S1U14|μπλούζα|blouse|n(f,,)
+Clothes|S1U14|κάλτσα|sock|n(f,,)
+Clothes|S1U14|κουστούμι|suit|n(n,,)
+Clothes|S1U14|κασκόλ|scarf|n(n,,)
+Clothes|S1U14|κόσμημα|piece of jewelry|n(n,s,ματα)
+Clothes|S1U14|κόσμηματα|jewelry|n(n,pl,ματα)
+Clothes|S1U14|στολή|uniform|n(f,,)
+Clothes|S1U14|ζώνη|belt|n(f,,)
+Clothes|S1U14|εσώρουχο|piece of underwear|n(n,s,)
+Clothes|S1U14|εσώρουχα|underwear|n(n,pl,)
+Clothes|S1U14|μπότα|boot|n(f,,)
+Clothes|S1U14|τσέπη|pocket|n(f,,)
+Clothes|S1U14|πορτοφόλι|wallet|n(n,,)
+Clothes|S1U14|κοντομάνικο|T-shirt|n(n,,)
+Clothes|S1U14|δερμάτινο|leather|a
+Numbers|S2U9|μηδέν|zero|
+Numbers|S2U9|ένα|one|
+Numbers|S2U9|δύο|two|
+Numbers|S2U9|τρία|three|
+Numbers|S2U9|τέσσερα|four|
+Numbers|S2U9|πέντε|five|
+Numbers|S2U9|έξι|six|
+Numbers|S2U9|επτά|seven|
+Numbers|S2U9|οκτώ|eight|
+Numbers|S2U9|εννέα|nine|
+Numbers|S2U9|δέκα|ten|
+Numbers|S2U9|έντεκα|eleven|
+Numbers|S2U9|δώδεκα|twelve|
+Numbers|S2U9|δεκαεφτά|seventeen|
+Numbers|S2U9|είκοσι|twenty|
+Numbers|S2U9|τριάντα|thirty|
+Numbers|S2U9|σαράντα|forty|
+Numbers|S2U9|πενήντα|fifty|
+Numbers|S2U9|εξήντα|sixty|
+Numbers|S2U9|εβδομήντα|seventy|
+Numbers|S2U9|ογδόντα|eighty|
+Numbers|S2U9|ενενήντα|ninety|
+Numbers|S2U9|εκατό|hundred|
+Numbers|S2U9|διακόσιοι|two hundred|
+Numbers|S2U9|τριακοσιοι|three hundred|
+Numbers|S2U9|τετρακόσιοι|four hundred|
+Numbers|S2U9|χίλιοι|thousand|
+Numbers|S2U9|εκατομμύριο|million|
+Numbers|S2U9|άπειρο|infinite|
+Numbers|S2U9|αριθμός|number / numeral / figure (m)|n(m,,)
+Numbers|S2U9|νούμερο|number / numeral / figure (n)|n(n,,)
+Numbers|S2U9|πρώτος|first|
+Numbers|S2U9|δεύτερος|second|
+Numbers|S2U9|τρίτος|third|
+Numbers|S2U9|τέταρτος|fourth|
+Numbers|S2U9|πέμπτος|fifth|
+Numbers|S2U9|τελευταίος|last|
+Numbers|S2U9|δις|twice|
+Numbers|S2U9|πολλάκις|many times|
+Time|S2U12|απόγευμα|afternoon / evening|n(n,,)
+Time|S2U12|νύχτα|night / tonight|n(f,,)
+Time|S2U12|ημέρα|day|
+Time|S2U12|βράδυ|night / evening|
+Time|S2U12|αύριο|tomorrow|
+Time|S2U12|απόψε|tonight|
+Time|S2U12|σήμερα|today|
+Time|S2U12|πρωί|morning|n(n,,)
+Time|S2U12|δευτέρα|Monday|n(f,,)
+Time|S2U12|τρίτη|Tuesday|n(f,,)
+Time|S2U12|τετάρτη|Wednesday|n(f,,)
+Time|S2U12|πέμπτη|Thursday|n(f,,)
+Time|S2U12|παρασκευή|Friday|n(f,,)
+Time|S2U12|σάββατο|Saturday|n(n,,)
+Time|S2U12|κυριακή|Sunday|n(f,,)
+Time|S2U12|αρχή|start / beginning|n(f,,)
+Time|S2U12|ώρα|time / hour|n(f,,)
+Time|S2U12|μεσημέρι|noon / afternoon|n(n,,)
+Time|S2U12|τέλος|end|n(n,,)
+Time|S2U2|τώρα|now|
+Time|S2U12|σαββατοκύριακο|weekend|n(n,,)
+Time|S2U12|ηλικία|age|n(f,,)
+Time|S2U12|εβδομάδα|week|n(f,,)
+Time|S2U12|χρόνος|year / time|n(m,,)
+Time|S2U12|μήνας|month|n(m,,)
+Time|S2U12|μεσάνιχτα|midnight|
+Time|S2U12|χθες|yesterday|
+Time|S2U12|μάρτιος|March|
+Time|S2U12|αύγουστος|August|
+Time|S2U12|απρίλιος|April|
+Time|S2U12|μάιος|May|
+Time|S2U12|οκτώβριος|October|
+Time|S2U12|σεπτέμβριος|September|
+Time|S2U12|ιανουάριος|January|
+Time|S2U12|ιούλιος|July|
+Time|S2U12|φεβρουάριος|February|
+Time|S2U12|χιλιετία|millennium|n(f,,)
+Time|S2U12|καλοκαίρι|summer|n(n,,)
+Time|S2U12|φθινόπωρο|fall / automn|n(n,,)
+Time|S2U12|νοέμβριος|November|
+Time|S2U12|δεκέμβριος|December|
+Time|S2U12|χειμώνας|winter|n(m,,)
+Time|S2U12|ιούνιος|June|
+Time|S2U12|εποχή|season|n(f,,)
+Time|S2U12|άνοιξη|spring|n(f,,)

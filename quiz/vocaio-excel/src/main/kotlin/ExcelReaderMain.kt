@@ -4,14 +4,14 @@ import jal.voca.lang.*
 import java.io.*
 
 fun main(args: Array<String>) {
-    val categories: Map<String, WordCategory>
+    val words: List<CategorizedTranslation>
     val wordForms: WordForms
 
     val excelName = if (args.size > 0) args[0] else "./Duo-G.xlsx"
 
     val inputStream: InputStream = FileInputStream(excelName)
     try {
-        categories = DictonaryExcelReader(listOf("Lettres", "Conjugation", "Forms")).readCategories(inputStream)
+        words = DictonaryExcelReader(listOf("Lettres", "Conjugation", "Forms")).readWords(inputStream)
     } finally {
         inputStream.close()
     }
@@ -27,7 +27,7 @@ fun main(args: Array<String>) {
     val wordsFile = FileOutputStream(dirName + "greek-words.csv")
     println("writing greek-words")
     try {
-        DictionaryCsvWriter().writeCategories(categories, wordsFile)
+        DictionaryCsvWriter().writeWords(words, wordsFile)
 
     } finally {
         wordsFile.close()

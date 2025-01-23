@@ -8,12 +8,15 @@ import java.io.ByteArrayOutputStream
 class DictionaryCsvWriterTest {
     @Test
     fun writeWord() {
-        val categories = mapOf("cat" to WordCategory("cat", listOf(Translation(
-            Word("word", TypeInfo(type = WordType.NOUN, gender = Gender.NEUTER)), 
-            Word("trans", TypeInfo())
-        ))))
+        val words = listOf(
+            CategorizedTranslation(Translation(
+                Word("word", TypeInfo(type = WordType.NOUN, gender = Gender.NEUTER)), 
+                Word("trans", TypeInfo())
+            ), listOf("cat"), "U1"),
+        )
+
         val output = ByteArrayOutputStream()
-        DictionaryCsvWriter().writeCategories(categories, output)
-        assertEquals("cat|word|trans|n(n,,)\n", output.toString())
+        DictionaryCsvWriter().writeWords(words, output)
+        assertEquals("cat|U1|word|trans|n(n,,)\n", output.toString())
     }
 }

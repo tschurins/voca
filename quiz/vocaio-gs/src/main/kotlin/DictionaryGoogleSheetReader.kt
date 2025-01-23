@@ -32,31 +32,29 @@ class DictionaryGoogleSheetReader(
         }
     }
 
-    fun readWords(ignoreSheets: List<String>) : Map<String, WordCategory> {
+    fun readWords(ignoreSheets: List<String>) : List<CategorizedTranslation> {
         val ranges = spreadsheet.getSheets()
                 .map { it.getProperties().getTitle() }
                 .filter { it !in ignoreSheets }
-                .map { it + "!A:C" }
+                .map { it + "!A:D" }
         val response = service.spreadsheets().values().batchGet(spreadsheetId)
                 .setRanges(ranges)
                 .execute()
         
-        val categories: MutableMap<String, WordCategory> = mutableMapOf()
+        val result = WordsBuilder()
         for (vr in response.getValueRanges()) {
             val sheetName = getSheetName(vr)
-            val translations: MutableList<Translation> = mutableListOf()
             for (row in vr.getValues()) {
-                val translation = readTranslation(row)
-                if (translation != null) {
-                    translations.add(translation)
+                val ct = readTranslation(row)
+                if (ct != null) {
+                    result.add(ct.translation.word.word, ct.translation.translation.word, ct.translation.word.typeInfo, sheetName, ct.unit)
                 }
             }
-            categories[sheetName] = WordCategory(sheetName, translations)
         }
-        return categories
+        return result.getWords()
     }
 
-    private fun readTranslation(row: List<Any>) : Translation? {
+    private fun readTranslation(row: List<Any>) : CategorizedTranslation? {
         val wordS = getValue(row, 0)
         if (wordS != null) {
             val translationS = getValue(row, 1)
@@ -70,7 +68,8 @@ class DictionaryGoogleSheetReader(
             }
             val word = Word(wordS, typeInfo)
             val translation = Word(translationS!!, TypeInfo(typeInfo.type, null, typeInfo.cardinality, null))
-            return Translation(word, translation)
+            val unit = getValue(row, 3);
+            return CategorizedTranslation(Translation(word, translation), listOf(), if (unit == null) "" else unit)
         }
         return null
     }

@@ -4,12 +4,12 @@ import jal.voca.lang.*
 import java.io.*
 
 fun main(args: Array<String>) {
-    val categories: Map<String, WordCategory>
+    val words: List<CategorizedTranslation>
     val wordForms: WordForms
 
     println("reading google sheet")
     val reader = DictionaryGoogleSheetReader.greek()
-    categories = reader.readWords(listOf("Lettres", "Conjugation", "Forms"))
+    words = reader.readWords(listOf("Lettres", "Conjugation", "Forms"))
 
     wordForms = reader.readForms()
 
@@ -18,7 +18,7 @@ fun main(args: Array<String>) {
     val wordsFile = FileOutputStream(dirName + "greek-words.csv")
     println("writing greek-words")
     try {
-        DictionaryCsvWriter().writeCategories(categories, wordsFile)
+        DictionaryCsvWriter().writeWords(words, wordsFile)
 
     } finally {
         wordsFile.close()

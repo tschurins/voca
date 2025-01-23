@@ -58,7 +58,7 @@ class QuizApp : Application {
         fromTranslation.setOnAction { installQuiz(stage, Quiz.newQuiz(dictionary, null, false), dictionary.wordLanguage) }
         fromTranslationButtons.children.add(fromTranslation)
 
-        for (category in dictionary.categories) {
+        for (category in dictionary.getCategories().values) {
             val w2t = Button(category.name)
             w2t.maxWidth = 10_000_000.0
             w2t.setOnAction { installQuiz(stage, Quiz.newQuiz(dictionary, category, true), dictionary.translationLanguage) }

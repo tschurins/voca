@@ -5,19 +5,21 @@ import java.io.InputStream
 import org.apache.poi.ss.usermodel.*
 
 class DictonaryExcelReader(val ignoreSheets: List<String>) {
-    fun readCategories(inputStream: InputStream): Map<String, WordCategory> {
+    fun readWords(inputStream: InputStream): List<CategorizedTranslation> {
         val workbook: Workbook = WorkbookFactory.create(inputStream)
         val nbSheets: Int = workbook.getNumberOfSheets()
 
-        val categories: MutableMap<String, WordCategory> = mutableMapOf()
+        val result = WordsBuilder()
         for (i in 0..<nbSheets) {
             val sheet: Sheet = workbook.getSheetAt(i)
             val sheetName: String = sheet.getSheetName()
             if (sheetName !in ignoreSheets) {
-                categories[sheetName] = readSheet(sheet)
+                for (translation in readSheet(sheet).words) {
+                    result.add(translation.word.word, translation.translation.word, translation.word.typeInfo, sheetName, "")
+                }
             }
         }
-        return categories
+        return result.getWords()
     }
 
     fun readSheet(sheet: Sheet): WordCategory {

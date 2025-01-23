@@ -8,14 +8,14 @@ import java.io.ByteArrayInputStream
 class DictionaryCsvReaderTest {
     @Test
     fun readWord() {
-        val stream = ByteArrayInputStream("cat|word|trans|n(n)".toByteArray())
-        val categories = DictionaryCsvReader().readCategories(stream)
+        val stream = ByteArrayInputStream("cat|unit|word|trans|n(n)".toByteArray())
+        val allWords = DictionaryCsvReader().readWords(stream)
 
-        assertEquals(1, categories.size)
-        val translations = categories["cat"]
-        assertNotNull(translations)
-        assertEquals(1, translations!!.words.size)
-        val translation = translations!!.words[0]
+        assertEquals(1, allWords.size)
+        val ct = allWords[0]
+        assertEquals("unit", ct.unit)
+        assertEquals(listOf("cat"), ct.categories)
+        val translation = ct.translation
         assertEquals("word", translation.word.word)
         assertEquals("trans", translation.translation.word)
     }

@@ -7,15 +7,12 @@ import kotlin.test.Test
 class QuizTest {
     @Test
     fun createQuiz_all() {
-        val categories: MutableList<WordCategory> = mutableListOf()
-        categories.add(WordCategory("cat1", mutableListOf(
-            Translation(Word("w1", TypeInfo()), Word("t1", TypeInfo())),
-            Translation(Word("w2", TypeInfo()), Word("t2", TypeInfo())),
-        )))
-        categories.add(WordCategory("cat3", mutableListOf(
-            Translation(Word("w3", TypeInfo()), Word("t3", TypeInfo())),
-        )))
-        val dico = Dictionary(greekLanguage, English(), categories)
+        val words = mutableListOf(
+            CategorizedTranslation(Translation(Word("w1", TypeInfo()), Word("t1", TypeInfo())), listOf("cat1"), "u1"),
+            CategorizedTranslation(Translation(Word("w2", TypeInfo()), Word("t2", TypeInfo())), listOf("cat1"), "u1"),
+            CategorizedTranslation(Translation(Word("w3", TypeInfo()), Word("t3", TypeInfo())), listOf("cat3"), "u1"),
+        )
+        val dico = Dictionary(greekLanguage, English(), words)
         val quiz = Quiz.newQuiz(dico, null, true)
 
         assertEquals(3, quiz.items.size)
@@ -23,17 +20,13 @@ class QuizTest {
 
     @Test
     fun createQuiz_cat() {
-        val categories: MutableList<WordCategory> = mutableListOf()
-        val cat = WordCategory("cat1", mutableListOf(
-            Translation(Word("w1", TypeInfo()), Word("t1", TypeInfo())),
-            Translation(Word("w2", TypeInfo()), Word("t2", TypeInfo())),
-        ))
-        categories.add(cat)
-        categories.add(WordCategory("cat3", mutableListOf(
-            Translation(Word("w3", TypeInfo()), Word("t3", TypeInfo())),
-        )))
-        val dico = Dictionary(greekLanguage, English(), categories)
-        val quiz = Quiz.newQuiz(dico, cat, true)
+        val words = mutableListOf(
+            CategorizedTranslation(Translation(Word("w1", TypeInfo()), Word("t1", TypeInfo())), listOf("cat1"), "u1"),
+            CategorizedTranslation(Translation(Word("w2", TypeInfo()), Word("t2", TypeInfo())), listOf("cat1"), "u1"),
+            CategorizedTranslation(Translation(Word("w3", TypeInfo()), Word("t3", TypeInfo())), listOf("cat3"), "u1"),
+        )
+        val dico = Dictionary(greekLanguage, English(), words)
+        val quiz = Quiz.newQuiz(dico, dico.getCategories()["cat1"], true)
 
         assertEquals(2, quiz.items.size)
     }

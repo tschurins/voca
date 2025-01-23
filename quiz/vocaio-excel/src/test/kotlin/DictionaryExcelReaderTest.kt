@@ -8,7 +8,7 @@ class DictionaryExcelReaderTest {
     @Test @Ignore
     fun readExcelFile() {
         val inputStream: InputStream = this::class.java.getResourceAsStream("/jal/voca/lang/io/Duo-G.xlsx")
-        val categories = DictonaryExcelReader(listOf("Lettres", "Conjugation", "Forms")).readCategories(inputStream)
+        val words = DictonaryExcelReader(listOf("Lettres", "Conjugation", "Forms")).readWords(inputStream)
         
     }
 }
