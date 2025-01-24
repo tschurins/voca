@@ -16,7 +16,7 @@ data class Quiz(val items: List<QuizItem>) {
 
         fun newQuiz(dico: Dictionary, category: WordCategory?, fromWordToTranslation: Boolean) : Quiz {
             val allWords = if (category == null) null else toWeightedMap(category.words)
-            return Quiz(getItems(QuizConfig(dico, allWords, fromWordToTranslation)))
+            return Quiz(getItems(QuizConfig(dico = dico, words = allWords, fromWordToTranslation = fromWordToTranslation)))
         }
 
         fun newQuiz(config: QuizConfig) : Quiz {
@@ -135,5 +135,7 @@ class Score {
 data class QuizConfig(
     val dico: Dictionary, 
     val words: Map<Translation, Int>? = null, 
+    val categoryName: String? = null,
     val fromWordToTranslation: Boolean,
-    val itemCount: Int = 10)
+    val itemCount: Int = 10,
+)

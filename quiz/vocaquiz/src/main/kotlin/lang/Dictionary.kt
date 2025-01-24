@@ -24,6 +24,7 @@ data class Dictionary(
         for (ct in words) {
             result.getOrPut(ct.unit) { mutableListOf() }.add(ct.translation)
         }
+        result.remove("")
         return result.mapValues { WordCategory(it.key, it.value) }
     }
 }

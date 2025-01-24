@@ -179,7 +179,7 @@ Expression|S1U4|γεια|Hello / Bye|
 Expression|S1U4|γεια σου|Hello (to one person)|
 Expression|S1U4|γεια σας|Hello (to multiple persons / formal)|
 Expression|S1U4|Χαίρετε|Hello|
-Expression|S1U4|θα ήθελα|I would like|
+Expression|S1U4|θα ήθελα...|I would like...|
 Expression|S1U5|παρακαλώ|please|
 Expression|S1U5|ευχαριστώ|Thank you|
 Expression|S1U8|πώς είσαι|How are you (singular)|
@@ -190,12 +190,16 @@ Expression|S1U8|καλησπέρα|Good afternoon|
 Expression|S1U8|Καληνύχτα|Good night|
 Expression|S1U8|τα λέμε|See you|
 Expression|S1U8|χάρηκα|Nice to meet you|
-Expression|S1U8|με λένε|My name is|
+Expression|S1U8|με λένε...|My name is...|
 Expression|S1U8|ορίστε|Here you are|
 Expression|S1U8|αντίο|Goodbye|
-Expression|S1U8|Πώς σε λένε|What is your name|
+Expression|S1U8|Πώς σε λένε;|What is your name?|
 Expression|S1U8|εντάξει|Alright / OK|
 Expression|S2U2|μου αρέσει το παγωτό|I like the ice cream|
+Expression||Πόσο κάνει αυτό;|How much is that?|
+Expression||Τι τρέχει;|What's the matter?|
+Expression||Έχει ήλιο και κάνει ζέστη |It's sunny and it's hot|
+Expression||Πόσο χρονών είσαι;|How old are you?|
 Other|S1U1|μίνι μάρκετ|mini market|n(n,,)
 Other|S1U1|βάζο|vase|n(n,,)
 Other|S1U2|βίντεο|video|n(n,,)
@@ -265,6 +269,7 @@ Conjunctions|S2U8|κατά|against / by / according|
 Conjunctions|S2U8|λόγω|because / due to / because of / the reason behind|
 Conjunctions|S2U8|εκτός (από)|except|
 Conjunctions|S2U8|κοντά (σε)|nearby / close to|
+Conjunctions|S2U12|παρά|but|
 Adjectives|S1U1|ροζ|pink|a
 Adjectives|S1U6|μεγάλος|big / tall|a
 Adjectives|S1U6|μικρός|little / tiny / small|a
@@ -447,21 +452,37 @@ Time|S2U12|χρόνος|year / time|n(m,,)
 Time|S2U12|μήνας|month|n(m,,)
 Time|S2U12|μεσάνιχτα|midnight|
 Time|S2U12|χθες|yesterday|
+Time|S2U12|ιανουάριος|January|
+Time|S2U12|φεβρουάριος|February|
 Time|S2U12|μάρτιος|March|
-Time|S2U12|αύγουστος|August|
 Time|S2U12|απρίλιος|April|
 Time|S2U12|μάιος|May|
-Time|S2U12|οκτώβριος|October|
-Time|S2U12|σεπτέμβριος|September|
-Time|S2U12|ιανουάριος|January|
+Time|S2U12|ιούνιος|June|
 Time|S2U12|ιούλιος|July|
-Time|S2U12|φεβρουάριος|February|
-Time|S2U12|χιλιετία|millennium|n(f,,)
-Time|S2U12|καλοκαίρι|summer|n(n,,)
-Time|S2U12|φθινόπωρο|fall / automn|n(n,,)
+Time|S2U12|αύγουστος|August|
+Time|S2U12|σεπτέμβριος|September|
+Time|S2U12|οκτώβριος|October|
 Time|S2U12|νοέμβριος|November|
 Time|S2U12|δεκέμβριος|December|
-Time|S2U12|χειμώνας|winter|n(m,,)
-Time|S2U12|ιούνιος|June|
+Time|S2U12|χιλιετία|millennium|n(f,,)
 Time|S2U12|εποχή|season|n(f,,)
 Time|S2U12|άνοιξη|spring|n(f,,)
+Time|S2U12|καλοκαίρι|summer|n(n,,)
+Time|S2U12|φθινόπωρο|fall / automn|n(n,,)
+Time|S2U12|χειμώνας|winter|n(m,,)
+Time|S2U12|στιγμές|moments|n(f,pl,)
+Time|S2U12|αιώνας|century|n(m,,)
+Time|S2U12|λεπτό|minute|n(n,,)
+Time|S2U12|γενιά|generation|n(f,,)
+Time|S2U12|περίοδος|period / time|n(f,,)
+Time|S2U12|δευτερόλεπτο|second|n(n,,)
+Time|S2U12|φέτος|this year|
+Time|S2U12|πέρυσι|last year|
+Time|S2U12|πριν|before|
+Time|S2U12|γέννηση|birth|n(f,,)
+Time|S2U12|ημερολόγιο|calendar / diary|n(n,,)
+Time|S2U12|δεκαετία|decade|n(f,,)
+Time|S2U12|τέταρτο|quarter|
+Time|S2U12|μισή|half|
+Time|S2U12|μέχρι|until|
+Time|S2U12|πάλι|again|
