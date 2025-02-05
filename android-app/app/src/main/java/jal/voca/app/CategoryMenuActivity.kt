@@ -11,6 +11,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -29,19 +31,11 @@ import androidx.compose.ui.unit.max
 import jal.voca.app.ui.theme.VocaTheme
 import jal.voca.lang.Dictionary
 import jal.voca.lang.WordCategory
-import jal.voca.lang.io.DictionaryCsvReader
 import jal.voca.quiz.Quiz
 import jal.voca.quiz.QuizConfig
 import jal.voca.quiz.QuizContext
 
 class CategoryMenuActivity : ComponentActivity() {
-    private fun getDictionary(): Dictionary {
-        if (globalDictionary == null) {
-            globalDictionary = DictionaryCsvReader().readGreekDictionary()
-        }
-        return globalDictionary!!
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -50,7 +44,7 @@ class CategoryMenuActivity : ComponentActivity() {
             VocaTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Menu(
-                        getDictionary(),
+                        getGlobalDictionary(this.filesDir),
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -59,16 +53,17 @@ class CategoryMenuActivity : ComponentActivity() {
     }
 
     private fun startQuiz(targetToBase: Boolean, category: WordCategory?) {
-        val dico = getDictionary()
+        globalCategory = category
+        val dico = getGlobalDictionary(this.filesDir)
         val quiz = Quiz.newQuiz(QuizConfig(
             dico = dico,
-            words = category?.words?.map { it to 1 }?.toMap(),
+            words = category?.words?.associate { it to 1 },
             fromWordToTranslation = targetToBase,
-            itemCount = configuration.itemCount
+            itemCount = globalConfiguration.itemCount
         ))
         val answerLanguage = if (targetToBase) dico.translationLanguage else dico.wordLanguage
         val context = QuizContext(quiz, answerLanguage)
-        context.nextItem();
+        context.nextItem()
 
         globalContext = context
         val intent = Intent(this, QuizActivity::class.java)
@@ -91,7 +86,11 @@ class CategoryMenuActivity : ComponentActivity() {
             buttonModifier = buttonModifier.width(width)
         }
 
-        Row(modifier = modifier.padding(4.dp).fillMaxSize()) {
+        Row(modifier = modifier
+            .padding(4.dp)
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState())
+        ) {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.padding(4.dp).fillMaxWidth().weight(1f)
@@ -99,7 +98,7 @@ class CategoryMenuActivity : ComponentActivity() {
                 Button(modifier = buttonModifier, onClick = { startQuiz(true, null) }) {
                     Text(dictionary.wordLanguage.name + " -> " + dictionary.translationLanguage.name)
                 }
-                for (category in dictionary.categories) {
+                for (category in globalCategoryLoader!!(dictionary, globalSortOptions).values) {
                     Button(modifier = buttonModifier, onClick = { startQuiz(true, category) }) {
                         Text(category.name)
                     }
@@ -115,7 +114,7 @@ class CategoryMenuActivity : ComponentActivity() {
                 Button(modifier = buttonModifier, onClick = { startQuiz(false, null) }) {
                     Text(dictionary.translationLanguage.name + " -> " + dictionary.wordLanguage.name)
                 }
-                for (category in dictionary.categories) {
+                for (category in globalCategoryLoader!!(dictionary, globalSortOptions).values) {
                     Button(modifier = buttonModifier, onClick = { startQuiz(false, category) }) {
                         Text(category.name)
                     }
@@ -134,7 +133,7 @@ class CategoryMenuActivity : ComponentActivity() {
     @Preview(showBackground = true)
     @Composable
     fun MenuPreview() {
-        val dictionary = getDictionary()
+        val dictionary = getGlobalDictionary()
         VocaTheme {
             Menu(dictionary)
         }

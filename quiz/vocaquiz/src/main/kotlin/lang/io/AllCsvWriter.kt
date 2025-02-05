@@ -24,26 +24,47 @@ class AllCsvWriter {
             }
         }
 
-        val wordsFile = FileOutputStream(File(targetDir, languageName + "-words.csv"))
+        val wordsFile = File(targetDir, languageName + "-words.csv")
+        val wordsIn = FileOutputStream(wordsFile)
         try {
-            DictionaryCsvWriter().writeWords(words, wordsFile)
+            println("[voca] write words to " + wordsFile.absolutePath + " -> " + words.size)
+            DictionaryCsvWriter().writeWords(words, wordsIn)
         } finally {
-            wordsFile.close()
+            wordsIn.close()
         }
 
-        val formsFile = FileOutputStream(File(targetDir, languageName + "-forms.csv"))
+        val formsFile = File(targetDir, languageName + "-forms.csv")
+        val formsIn = FileOutputStream(formsFile)
         try {
-            WordFormCsvWriter().writeWordForms(wordForms.suffixes, formsFile)
+            println("[voca] write forms to " + formsFile.absolutePath)
+            WordFormCsvWriter().writeWordForms(wordForms.suffixes, formsIn)
         } finally {
-            formsFile.close()
+            formsIn.close()
         }
 
-        val articlesFile = FileOutputStream(File(targetDir, languageName + "-articles.csv"))
+        val articlesFile = File(targetDir, languageName + "-articles.csv")
+        val articlesIn = FileOutputStream(articlesFile)
         try {
-            ArticlesCsvWriter().writeArticles(wordForms.articles, articlesFile)
+            println("[voca] write articles to " + articlesFile.absolutePath)
+            ArticlesCsvWriter().writeArticles(wordForms.articles, articlesIn)
         } finally {
-            articlesFile.close()
+            articlesIn.close()
         }
+    }
+
+    fun deleteAll(targetDir: File, languageName: String) {
+        if (!targetDir.exists()) {
+            return;
+        }
+
+        val wordsFile = File(targetDir, languageName + "-words.csv")
+        wordsFile.delete()
+
+        val formsFile = File(targetDir, languageName + "-forms.csv")
+        formsFile.delete()
+
+        val articlesFile = File(targetDir, languageName + "-articles.csv")
+        articlesFile.delete()
     }
 
      /**
@@ -58,7 +79,9 @@ class AllCsvWriter {
         val diffDico = fullDico.diff(dico)
 
         if (!diffDico.words.isEmpty()) {
-            writeAll(diffDico.words, full.getForms(), targetDir, dico.wordLanguage.name)
+            println("[voca] diff: " + diffDico.words.map { it.translation.word })
+
+            writeAll(diffDico.words, full.getForms(), targetDir, dico.wordLanguage.name.lowercase())
         }
     }
 

@@ -62,8 +62,11 @@ class MainActivity : ComponentActivity() {
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = modifier.padding(4.dp).fillMaxSize()
         ) {
-            Button(modifier = buttonModifier, onClick = { goToQuiz() }) {
-                Text("Quizzes")
+            Button(modifier = buttonModifier, onClick = { goToCategoryMenu() }) {
+                Text("Word Categories")
+            }
+            Button(modifier = buttonModifier, onClick = { goToUnitMenu() }) {
+                Text("Units")
             }
             Button(modifier = buttonModifier, onClick = { goToConfig() }) {
                 Text("Configuration")
@@ -71,7 +74,16 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    private fun goToQuiz() {
+    private fun goToCategoryMenu() {
+        globalSortOptions.numericPattern = null
+        globalCategoryLoader = { dico, sort -> dico.getCategories().toSortedMap(sort.getComparator()) }
+        val intent = Intent(this, CategoryMenuActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun goToUnitMenu() {
+        globalSortOptions.numericPattern = "S(\\d+)U(\\d+)"
+        globalCategoryLoader = { dico, sort -> dico.getUnits().toSortedMap(sort.getComparator()) }
         val intent = Intent(this, CategoryMenuActivity::class.java)
         startActivity(intent)
     }

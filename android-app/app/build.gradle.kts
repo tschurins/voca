@@ -37,8 +37,13 @@ android {
     buildFeatures {
         compose = true
     }
-}
 
+    packaging {
+        // to avoid issues when mergine the dependencies
+        pickFirst("META-INF/INDEX.LIST")
+        pickFirst("META-INF/DEPENDENCIES")
+    }
+}
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -54,6 +59,7 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation("jal.voca:vocaquiz:0.1-SNAPSHOT")
+    implementation("jal.voca:vocaio-gs:0.1-SNAPSHOT")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

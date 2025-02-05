@@ -185,6 +185,7 @@ class QuizActivity : ComponentActivity() {
     fun Result(context: QuizContext, modifier: Modifier = Modifier, nextAction: () -> Unit) {
         Column(modifier = modifier
                 .fillMaxSize()) {
+            Text(if (globalCategory == null) "All words" else globalCategory!!.name, modifier = Modifier.padding(4.dp))
             Text("Result: " + context.score.score + "/" + context.score.total, modifier = Modifier.padding(4.dp))
             if (context.failures.isNotEmpty()) {
                 Text("Failures:", modifier = Modifier.padding(top = 4.dp, start = 4.dp, end = 4.dp))

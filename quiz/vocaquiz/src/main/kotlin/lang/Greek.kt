@@ -22,14 +22,18 @@ class Greek: Language {
     constructor(dir: File? = null) {
         val gaFile = if (dir == null) null else File(dir, "greek-articles.csv")
         val inputArticles = if (gaFile != null && gaFile.exists()) {
+            println("[voca] read articles from " + gaFile.absolutePath)
             FileInputStream(gaFile)
         } else {
+            println("[voca] read articles from library")
             this::class.java.getResourceAsStream("/jal/voca/lang/greek-articles.csv")
         }
         val ifFile = if (dir == null) null else File(dir, "greek-forms.csv")
         val inputForms = if (ifFile != null && ifFile.exists()) {
+            println("[voca] read forms from " + ifFile.absolutePath)
             FileInputStream(ifFile)
         } else {
+            println("[voca] read forms from library")
             this::class.java.getResourceAsStream("/jal/voca/lang/greek-forms.csv")
         }
         try {

@@ -1,4 +1,7 @@
 plugins {
+    `java-library`
+    `maven-publish`
+
     id("buildlogic.kotlin-application-conventions")
 }
 
@@ -27,5 +30,19 @@ tasks.test {
         // Make sure output from standard out or error is shown in Gradle output.
         showStandardStreams = true
         exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            from(components["java"])
+            groupId = "jal.voca"
+            artifactId = "vocaio-gs"
+            version = "0.1-SNAPSHOT"
+        }
+    }
+    repositories {
+        mavenLocal()
     }
 }

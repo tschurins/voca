@@ -16,12 +16,14 @@ class DictionaryCsvReader {
         val input = this::class.java.getResourceAsStream("/jal/voca/lang/greek-words.csv")
         try {
             val base = readWords(input)
+            println("[voca] read words from library -> " + base.size)
             val all = if (dir != null) {
                 val wordFile = File(dir, "greek-words.csv")
                 if (wordFile.exists()) {
                     val fin = FileInputStream(wordFile)
                     try {
                         val ext = readWords(fin)
+                        println("[voca] read words from " + wordFile.absolutePath + " -> " + ext.size)
                         val both = ArrayList(base)
                         both.addAll(ext)
                         both
@@ -29,6 +31,7 @@ class DictionaryCsvReader {
                         fin.close()
                     }
                 } else {
+                    println("[voca] local file " + wordFile.absolutePath + " does not exist")
                     base
                 }
             } else {
