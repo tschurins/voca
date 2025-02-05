@@ -57,7 +57,9 @@ class AllCsvWriter {
         val fullDico = Dictionary(dico.wordLanguage, dico.translationLanguage, fullWords)
         val diffDico = fullDico.diff(dico)
 
-        writeAll(diffDico.words, full.getForms(), targetDir, dico.wordLanguage.name)
+        if (!diffDico.words.isEmpty()) {
+            writeAll(diffDico.words, full.getForms(), targetDir, dico.wordLanguage.name)
+        }
     }
 
 }

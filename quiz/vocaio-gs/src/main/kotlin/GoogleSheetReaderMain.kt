@@ -4,9 +4,6 @@ import jal.voca.lang.*
 import java.io.*
 
 fun main(args: Array<String>) {
-    val words: List<CategorizedTranslation>
-    val wordForms: WordForms
-
     println("reading google sheet")
     val reader = DictionaryGoogleSheetReader.greek()
 
