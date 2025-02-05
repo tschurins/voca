@@ -2,6 +2,7 @@ package jal.voca.lang
 
 import jal.voca.lang.WordComparator.ComparatorResult
 import jal.voca.lang.io.*
+import java.io.*
 
 class Greek: Language {
     override val name = "Greek"
@@ -14,9 +15,23 @@ class Greek: Language {
 
     val wordForms: WordForms
 
-    constructor() {
-        val inputArticles = this::class.java.getResourceAsStream("/jal/voca/lang/greek-articles.csv")
-        val inputForms = this::class.java.getResourceAsStream("/jal/voca/lang/greek-forms.csv")
+    /**
+     * Creates the Greek language based on the files packaged within the library
+     * and the optional files present in the given directory.
+     */
+    constructor(dir: File? = null) {
+        val gaFile = if (dir == null) null else File(dir, "greek-articles.csv")
+        val inputArticles = if (gaFile != null && gaFile.exists()) {
+            FileInputStream(gaFile)
+        } else {
+            this::class.java.getResourceAsStream("/jal/voca/lang/greek-articles.csv")
+        }
+        val ifFile = if (dir == null) null else File(dir, "greek-forms.csv")
+        val inputForms = if (ifFile != null && ifFile.exists()) {
+            FileInputStream(ifFile)
+        } else {
+            this::class.java.getResourceAsStream("/jal/voca/lang/greek-forms.csv")
+        }
         try {
             val articles = ArticlesCsvReader().readArticles(inputArticles)
             val forms = WordFormCsvReader().readWordForms(inputForms)

@@ -7,9 +7,9 @@ class DictionaryExcelReaderTest {
     @Test @Ignore
     fun readGoogleSheet() {
         val greekSheet = DictionaryGoogleSheetReader.greek()
-        val categories = greekSheet.readWords(listOf("Lettres", "Conjugation", "Forms"))
+        val categories = greekSheet.getWords()
         println("cat: " + categories)
-        val forms = greekSheet.readForms()
+        val forms = greekSheet.getForms()
         println("forms: " + forms)
     }
 }

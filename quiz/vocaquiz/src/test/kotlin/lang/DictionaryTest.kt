@@ -91,4 +91,26 @@ class DictionaryTest {
         val expected = listOf("S1U1", "S1U2", "S1U10", "S2U1")
         assertEquals(expected, sortedUnits)
     }
+
+    @Test
+    fun diff() {
+        val t = TypeInfo()
+         val words1 = listOf(
+            CategorizedTranslation(Translation(Word("A", t), Word("A", t)), listOf("C1"), "S1U1"),
+            CategorizedTranslation(Translation(Word("B", t), Word("B", t)), listOf("C1"), "S1U2"),
+            CategorizedTranslation(Translation(Word("C", t), Word("C", t)), listOf("C1"), "S1U2"),
+        )
+        val dico1 = Dictionary(English(), English(), words1)
+
+        val words2 = listOf(
+            CategorizedTranslation(Translation(Word("A", t), Word("A", t)), listOf("C1"), "S1U1"),
+            CategorizedTranslation(Translation(Word("B", t), Word("B", t)), listOf("C1"), "S1U2"),
+            CategorizedTranslation(Translation(Word("C", t), Word("C", t)), listOf("C1"), "S1U2"),
+            CategorizedTranslation(Translation(Word("D", t), Word("D", t)), listOf("C1"), "S2U1"),
+        )
+        val dico2 = Dictionary(English(), English(), words2)
+
+        val diff = dico2.diff(dico1)
+        assertEquals(1, diff.words.size)
+   }
 }

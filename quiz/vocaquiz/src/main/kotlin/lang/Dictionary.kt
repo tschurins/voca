@@ -27,6 +27,17 @@ data class Dictionary(
         result.remove("")
         return result.mapValues { WordCategory(it.key, it.value) }
     }
+
+    /**
+     * Computes the difference between this dictionary and the given one.
+     * The returned dictionary will contain only the words present in this dictionary and
+     * not in the given one.
+     */
+    fun diff(other: Dictionary) : Dictionary {
+        val diffWords = ArrayList(words)
+        diffWords.removeAll(other.words)
+        return Dictionary(wordLanguage, translationLanguage, diffWords)
+    }
 }
 
 data class WordCategory(

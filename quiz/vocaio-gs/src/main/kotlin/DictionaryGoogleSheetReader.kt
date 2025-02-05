@@ -6,33 +6,35 @@ import com.google.api.services.sheets.v4.*
 import com.google.api.services.sheets.v4.Sheets.Builder
 import com.google.api.services.sheets.v4.model.*
 import jal.voca.lang.*
+import jal.voca.lang.io.FullReader
 
 
 class DictionaryGoogleSheetReader(
         val spreadsheetId: String,
         val service: Sheets,
         val spreadsheet: Spreadsheet,
-) {
+        val ignoreSheets: List<String>,
+) : FullReader {
 
     companion object Factory {
-        fun create(spreadsheetId: String, apiKey: String) : DictionaryGoogleSheetReader {
+        fun create(spreadsheetId: String, apiKey: String, ignoreSheets: List<String>) : DictionaryGoogleSheetReader {
             val transport = NetHttpTransport.Builder().build()
             val service = Builder(transport, GsonFactory.getDefaultInstance(), null)
                     .setApplicationName("voca")
                     .setGoogleClientRequestInitializer(SheetsRequestInitializer(apiKey))
                     .build()
             val spreadsheet = service.spreadsheets().get(spreadsheetId).execute()
-            return DictionaryGoogleSheetReader(spreadsheetId, service, spreadsheet)
+            return DictionaryGoogleSheetReader(spreadsheetId, service, spreadsheet, ignoreSheets)
         }
 
         fun greek() : DictionaryGoogleSheetReader {
             val apiKey = DictionaryGoogleSheetReader::class.java.getResource("/jal/voca/lang/io/apikey").readText().trim()
             val spreadsheetId = "12Ca3QRBPWKtEspy1vTvRWGdS586d4a-E275-1gsCJjE"
-            return create(spreadsheetId, apiKey)
+            return create(spreadsheetId, apiKey, listOf("Lettres", "Conjugation", "Forms"))
         }
     }
 
-    fun readWords(ignoreSheets: List<String>) : List<CategorizedTranslation> {
+    override fun getWords() : List<CategorizedTranslation> {
         val ranges = spreadsheet.getSheets()
                 .map { it.getProperties().getTitle() }
                 .filter { it !in ignoreSheets }
@@ -80,7 +82,7 @@ class DictionaryGoogleSheetReader(
         return range.substring(0, bang)
     }
 
-    fun readForms() : WordForms {
+    override fun getForms() : WordForms {
         val sheetData = service.spreadsheets().values().get(spreadsheetId, "Forms").execute().getValues()
 
         val formsResult: MutableList<WordCasesPerGender> = mutableListOf()

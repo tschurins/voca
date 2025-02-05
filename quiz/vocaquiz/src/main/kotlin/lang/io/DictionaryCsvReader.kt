@@ -5,14 +5,36 @@ import java.io.*
 
 /**
  * Format is:
- * Category | Word | Translation | Word Type Info 
+ * Category | Unit | Word | Translation | Word Type Info 
  */
 class DictionaryCsvReader {
-    fun readGreekDictionary(): Dictionary {
+    /**
+     * Creates the Greek language based on the files packaged within the library
+     * and the optional files present in the given directory.
+     */
+    fun readGreekDictionary(dir: File? = null): Dictionary {
         val input = this::class.java.getResourceAsStream("/jal/voca/lang/greek-words.csv")
         try {
-            val all = readWords(input)
-            return Dictionary(Greek(), English(), all)
+            val base = readWords(input)
+            val all = if (dir != null) {
+                val wordFile = File(dir, "greek-words.csv")
+                if (wordFile.exists()) {
+                    val fin = FileInputStream(wordFile)
+                    try {
+                        val ext = readWords(fin)
+                        val both = ArrayList(base)
+                        both.addAll(ext)
+                        both
+                    } finally {
+                        fin.close()
+                    }
+                } else {
+                    base
+                }
+            } else {
+                base
+            }
+            return Dictionary(Greek(dir), English(), all)
         } finally {
             input.close()
         }

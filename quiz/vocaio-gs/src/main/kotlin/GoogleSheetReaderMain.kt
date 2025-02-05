@@ -9,36 +9,9 @@ fun main(args: Array<String>) {
 
     println("reading google sheet")
     val reader = DictionaryGoogleSheetReader.greek()
-    words = reader.readWords(listOf("Lettres", "Conjugation", "Forms"))
-
-    wordForms = reader.readForms()
-
 
     val dirName = if (args.size > 0) args[0] else "./"
-    val wordsFile = FileOutputStream(dirName + "greek-words.csv")
-    println("writing greek-words")
-    try {
-        DictionaryCsvWriter().writeWords(words, wordsFile)
-
-    } finally {
-        wordsFile.close()
-    }
-
-    val formsFile = FileOutputStream(dirName + "greek-forms.csv")
-    println("writing greek-forms")
-    try {
-        WordFormCsvWriter().writeWordForms(wordForms.suffixes, formsFile)
-
-    } finally {
-        formsFile.close()
-    }
-
-    val articlesFile = FileOutputStream(dirName + "greek-articles.csv")
-    println("writing greek-articles")
-    try {
-        ArticlesCsvWriter().writeArticles(wordForms.articles, articlesFile)
-
-    } finally {
-        articlesFile.close()
-    }
+    val dir = File(dirName)
+    println("writing to " + dir.absolutePath)
+    AllCsvWriter().writeAll(reader, dir, "greek")
 }

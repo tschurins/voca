@@ -167,12 +167,48 @@ Persons|S2U10|αδύνατος|thin|a
 Persons|S2U10|όμορφος|beautiful / handsome / pretty|a
 Persons|S2U10|άσχημος|ugly / nasty|a
 Persons|S2U10|κοντός|short|a
-Persons|S2U10|μελαχρινός|dart-haired|a
+Persons|S2U10|μελαχρινός|dark-haired|a
 Persons|S2U10|ψηλός|tall|a
 Persons|S2U10|αδύναμος|weak / powerless|a
 Persons|S2U10|δυνατός|strong / powerful|a
 Persons|S2U10|βρώμικος|dirty|a
 Persons|S2U10|καθαρός|clean / clear|a
+Persons|S2U13|μοντέλο|model|n(n,,)
+Persons|S2U13|συγγραφέας |writer|n(m,,)
+Persons|S2U13|δουλειά  / εργασία|job / work|n(f,,)
+Persons|S2U13|μαθητής |student|n(m,,)
+Persons|S2U13|γιατρός |doctor|n(m,,)
+Persons|S2U13|παπάς |priest|n(m,,)
+Persons|S2U13|γραμματέας |secretary|n(f,,)
+Persons|S2U13|εργάτης |worker|n(m,,)
+Persons|S2U13|επαγγελματίας |professional |a
+Persons|S2U13|καριέρα |career|n(f,,)
+Persons|S2U13|δικηγόρος |lawyer |n(m,,)
+Persons|S2U13|διευθυντής |manager|n(m,,)
+Persons|S2U13|καλλιτέχνης |artist|n(m,,)
+Persons|S2U13|στρατιώτης |soldier|n(m,,)
+Persons|S2U13|αξιωματικός |officer|n(m,,)
+Persons|S2U13|προϊστάμενος |manager / boss|n(m,,)
+Persons|S2U13|ηθοποιός |actor|n(m,,)
+Persons|S2U13|καπετάνιος |captain|n(m,,)
+Persons|S2U13|φύλακας |guard|n(m,,)
+Persons|S2U13|δικαστής |judge|n(m,,)
+Persons|S2U13|συντάκτης |author|n(m,,)
+Persons|S2U13|μηχανικός |mechanic / engineer |n(m,,)
+Persons|S2U13|αγρότης |farmer|n(m,,)
+Persons|S2U13|σερβιτόρα |waitress |n(f,,)
+Persons|S2U13|αφεντικό |boss|n(n,,)
+Persons|S2U13|επάγγελμα |profession|n(n,,)
+Persons|S2U13|μάγειρας |cook|n(m,,)
+Persons|S2U13|σερβιτόρος |waiter|n(m,,)
+Persons|S2U13|πυροσβέστης |firefighter|n(m,,)
+Persons|S2U13|οικοδόμος |builder|n(m,,)
+Persons|S2U13|αστυνομικός |policeman |n(m,,)
+Persons|S2U13|ηλεκτρολόγος |electrician |n(m,,)
+Persons|S2U13|καθαριστής |cleaner|n(m,,)
+Persons|S2U13|υδραυλικός |plumber|n(m,,)
+Persons|S2U13|οδηγός |driver|n(m,,)
+Persons|S2U13|κτηνίατρος |vet / veterinarian |n(m,,)
 Expression|S1U1|ναι|yes|
 Expression|S1U1|όχι|no|
 Expression|S1U4|γεια|Hello / Bye|
@@ -255,12 +291,12 @@ Conjunctions|S2U8|σαν|like|
 Conjunctions|S2U8|δίπλα (σε)|next to / near by|
 Conjunctions|S2U8|μέσα (σε)|inside / into / in|
 Conjunctions|S2U8|πίσω (από)|behind|
-Conjunctions|S2U8|εξαιτίας|because of / due to|
+Conjunctions|S2U8|εξαιτίας|because of / due to / because|
 Conjunctions|S2U8|όπως|like / as / such as|
 Conjunctions|S2U8|έξω (από)|out / outside|
-Conjunctions|S2U8|πάνω (από)|on / over / on top of|
+Conjunctions|S2U8|πάνω (από)|on / over / on top of / up|
 Conjunctions|S2U8|χωρίς|without|
-Conjunctions|S2U8|κάτω (σε)|down|
+Conjunctions|S2U8|κάτω (σε)|down / under|
 Conjunctions|S2U8|μετά (από)|after / then|
 Conjunctions|S2U8|μεταξύ|between|
 Conjunctions|S2U8|αντί (για)|instead|
@@ -270,6 +306,7 @@ Conjunctions|S2U8|λόγω|because / due to / because of / the reason behind|
 Conjunctions|S2U8|εκτός (από)|except|
 Conjunctions|S2U8|κοντά (σε)|nearby / close to|
 Conjunctions|S2U12|παρά|but|
+Conjunctions|S2U13|ως |as|
 Adjectives|S1U1|ροζ|pink|a
 Adjectives|S1U6|μεγάλος|big / tall|a
 Adjectives|S1U6|μικρός|little / tiny / small|a
@@ -288,14 +325,14 @@ Adjectives|S2U3|Λευκό / άσπρο|white|a
 Adjectives|S2U3|Κόκκινο / ερυθρό|red|a
 Adjectives|S2U3|γκρι|grey|a
 Adjectives|S2U3|κίτρινο|yellow|a
-Adjectives|S2U3|πολύχρωμος|multi;colored|a
+Adjectives|S2U3|πολύχρωμος|multicolored / colorful|a
 Adjectives|S2U3|ασπρόμαυρος|black and white|a
 Adjectives|S2U3|ανοιχρός κόκκινο|light red|a
 Adjectives|S2U3|βαθύ μπλε|deep blue|a
 Adjectives|S2U3|σκούρο πράσινο|dark green|a
 Adjectives|S2U7|κρύο|cold|a
 Adjectives|S2U7|σιννεφιά|cloudy|a
-Adjectives|S2U7|ζέστη|Heat / hot|a
+Adjectives|S2U7|ζέστη|heat / hot|a
 Adjectives|S2U11|γενικός|general|a
 Adjectives|S2U11|τοπικός|local|a
 Adjectives|S2U11|πραγματικός|real|a
