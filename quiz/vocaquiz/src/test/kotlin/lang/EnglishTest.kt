@@ -16,4 +16,22 @@ class EnglishTest {
         val result = English().getWord(Word("siblings", TypeInfo(type = WordType.NOUN, cardinality = Cardinality.PLURAL)), WordForm(WordCase.NOMINATIVE, Cardinality.PLURAL), null)
         assertEquals("siblings", result)
     }
+
+    @Test
+    fun compare_homophone_dash() {
+        val result = English().wordComparator.compare(
+            "dark-haired",
+            "darkhaired",
+        )
+        assertEquals(ComparatorResult.HOMOPHONE, result)
+    }
+
+    @Test
+    fun compare_homophone_space() {
+        val result = English().wordComparator.compare(
+            "dark haired",
+            "darkhaired",
+        )
+        assertEquals(ComparatorResult.HOMOPHONE, result)
+    }
 }

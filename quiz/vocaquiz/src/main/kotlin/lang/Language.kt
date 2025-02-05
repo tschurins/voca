@@ -40,6 +40,18 @@ class DefaultWordComparator: WordComparator {
         if (s1 == s2) {
             return WordComparator.ComparatorResult.EXACT_MATCH
         }
-        return WordComparator.ComparatorResult.NO_MATCH
+
+
+        val h1 = s1
+            .replace("-", "")
+            .replace(" ", "")
+        val h2 = s2
+            .replace("-", "")
+            .replace(" ", "")
+        if (h1 == h2) {
+            return WordComparator.ComparatorResult.HOMOPHONE
+        } else {
+            return WordComparator.ComparatorResult.NO_MATCH
+        }
     }
 }

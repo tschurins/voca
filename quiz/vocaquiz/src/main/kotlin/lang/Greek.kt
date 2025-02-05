@@ -183,6 +183,8 @@ class GreekCharacters {
             .replace("οι", "ι")
             .replace("ει", "ι")
             .replace("αι", "ε")
+            .replace("-", "")
+            .replace(" ", "")
         val sb = StringBuilder()
         for (c in r1) {
             sb.append(getHomophone(c))

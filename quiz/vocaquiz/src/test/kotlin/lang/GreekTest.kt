@@ -86,6 +86,24 @@ class GreekTest {
     }
 
     @Test
+    fun compare_homophone_dash() {
+        val result = greekLanguage.wordComparator.compare(
+            convert("ant-ras"),
+            convert("antras"),
+        )
+        assertEquals(ComparatorResult.HOMOPHONE, result)
+    }
+
+    @Test
+    fun compare_homophone_space() {
+        val result = greekLanguage.wordComparator.compare(
+            convert("ant ras"),
+            convert("antras"),
+        )
+        assertEquals(ComparatorResult.HOMOPHONE, result)
+    }
+
+    @Test
     fun getArticle_neuter() {
         val boy = Word(convert("agori"), TypeInfo(type = WordType.NOUN, gender = Gender.NEUTER))
         val article = greekLanguage.getArticle(boy, WordForm(WordCase.NOMINATIVE, Cardinality.SINGULAR), ArticleType.DEFINITE)
