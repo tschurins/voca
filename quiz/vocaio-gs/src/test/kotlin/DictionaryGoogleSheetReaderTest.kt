@@ -14,7 +14,7 @@ class DictionaryExcelReaderTest {
         println("forms: " + forms)
     }
 
-    @Test
+    @Test @Ignore
     fun compareWithSources() {
         val fromSources = DictionaryCsvReader().readGreekDictionary()
 

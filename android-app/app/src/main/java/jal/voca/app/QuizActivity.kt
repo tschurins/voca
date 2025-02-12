@@ -5,14 +5,23 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Button
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -90,7 +99,9 @@ class QuizActivity : ComponentActivity() {
     }
 
     @Composable
-    fun Question(item: QuizItem, modifier: Modifier = Modifier, nextAction: (String) -> Unit) {
+    fun Question(item: QuizItem,
+                 modifier: Modifier = Modifier,
+                 nextAction: (String) -> Unit) {
         var answer by remember { mutableStateOf("") }
 
         // show keyboard https://stackoverflow.com/a/76759961
@@ -133,17 +144,24 @@ class QuizActivity : ComponentActivity() {
                         return@onKeyEvent false
                     },
             )
-            Button(onClick = {
-                nextAction(answer)
-            }, modifier = Modifier.padding(4.dp)) {
-                Text("OK")
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                Button(onClick = {
+                    nextAction(answer)
+                }, modifier = Modifier.padding(4.dp)) {
+                    Text("OK")
+                }
+                FavoriteButton(item = item, modifier = Modifier.padding(4.dp))
             }
         }
     }
 
 
     @Composable
-    fun Answer(item: QuizItem, context: QuizContext, givenAnswer: String, modifier: Modifier = Modifier, nextAction: () -> Unit, endAction: () -> Unit) {
+    fun Answer(item: QuizItem, context: QuizContext,
+               givenAnswer: String,
+               modifier: Modifier = Modifier,
+               nextAction: () -> Unit,
+               endAction: () -> Unit) {
         Column(modifier = modifier
                 .fillMaxSize()) {
             Text(item.question, modifier = Modifier.padding(4.dp))
@@ -163,7 +181,7 @@ class QuizActivity : ComponentActivity() {
                     Text(text = item.answer, modifier = Modifier.padding(4.dp))
                 }
             }
-            Row (modifier = Modifier) {
+            Row (modifier = Modifier.fillMaxWidth()) {
                 if (context.hasNextItem()) {
                     Button(onClick = {
                         nextAction()
@@ -176,8 +194,38 @@ class QuizActivity : ComponentActivity() {
                 }, modifier = Modifier.padding(4.dp)) {
                     Text("End")
                 }
-
+                Spacer(Modifier.weight(1f))
+                FavoriteButton(item = item, modifier = Modifier.padding(4.dp))
             }
+        }
+    }
+
+    @Composable
+    fun FavoriteButton(
+        item: QuizItem,
+        modifier: Modifier,
+    ) {
+        var stateF by remember { mutableStateOf(globalFavorites.isFavorite(item.question)) }
+
+        Box(modifier = modifier.padding(horizontal = 10.dp)) {
+            Button(
+                onClick = {
+                    stateF = !stateF
+                    setFavorite(item, stateF)
+                },
+                shape = CircleShape,
+                modifier = modifier.size(40.dp),
+                contentPadding = PaddingValues(1.dp)
+            ) {
+                // Inner content including an icon and a text label
+                Icon(
+                    imageVector = Icons.Default.Star,
+                    tint = if (stateF) Color.Yellow else Color.White,
+                    contentDescription = "Favorite",
+                    modifier = Modifier.size(20.dp)
+                )
+            }
+
         }
     }
 
@@ -201,9 +249,13 @@ class QuizActivity : ComponentActivity() {
         }
     }
 
+    private fun setFavorite(item: QuizItem, favorite: Boolean) {
+        globalFavorites.setFavorite(item.question, favorite)
+    }
+
     private fun backToMenu() {
         // restart the main activity as top of the back stack.
-        val intent = Intent(this, CategoryMenuActivity::class.java)
+        val intent = Intent(this, if (globalCategoryLoader == null) MainActivity::class.java else CategoryMenuActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
         startActivity(intent)
     }
@@ -211,6 +263,7 @@ class QuizActivity : ComponentActivity() {
     @Preview(showBackground = true)
     @Composable
     fun QuestionPreview() {
+        globalFavorites.clear()
         val context = QuizContext(Quiz(listOf(QuizItem("What is the color of Napoleon's white horse?", "White", ""))), English())
         context.nextItem()
         VocaTheme {
@@ -220,7 +273,20 @@ class QuizActivity : ComponentActivity() {
 
     @Preview(showBackground = true)
     @Composable
+    fun QuestionPreviewFavorite() {
+        val question = "What is the color of Napoleon's white horse?"
+        val context = QuizContext(Quiz(listOf(QuizItem(question, "White", ""))), English())
+        globalFavorites.setFavorite(question, true)
+        context.nextItem()
+        VocaTheme {
+            Quiz(context = context, initialState = State.QUESTION)
+        }
+    }
+
+    @Preview(showBackground = true)
+    @Composable
     fun CorrectAnswerPreview() {
+        globalFavorites.clear()
         val context = QuizContext(Quiz(listOf(QuizItem("What is the color of Napoleon's white horse?", "White", ""))), English())
         context.nextItem()
         context.setAnswer("White")
@@ -232,7 +298,11 @@ class QuizActivity : ComponentActivity() {
     @Preview(showBackground = true)
     @Composable
     fun WrongAnswerPreview() {
-        val context = QuizContext(Quiz(listOf(QuizItem("What is the color of Napoleon's white horse?", "White", ""))), English())
+        globalFavorites.clear()
+        val context = QuizContext(Quiz(listOf(
+            QuizItem("What is the color of Napoleon's white horse?", "White", ""),
+            QuizItem("next", "a", ""),
+        )), English())
         context.nextItem()
         context.setAnswer("Black")
         VocaTheme {

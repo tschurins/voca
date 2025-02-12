@@ -31,9 +31,6 @@ import androidx.compose.ui.unit.max
 import jal.voca.app.ui.theme.VocaTheme
 import jal.voca.lang.Dictionary
 import jal.voca.lang.WordCategory
-import jal.voca.quiz.Quiz
-import jal.voca.quiz.QuizConfig
-import jal.voca.quiz.QuizContext
 
 class CategoryMenuActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,21 +50,7 @@ class CategoryMenuActivity : ComponentActivity() {
     }
 
     private fun startQuiz(targetToBase: Boolean, category: WordCategory?) {
-        globalCategory = category
-        val dico = getGlobalDictionary(this.filesDir)
-        val quiz = Quiz.newQuiz(QuizConfig(
-            dico = dico,
-            words = category?.words?.associate { it to 1 },
-            fromWordToTranslation = targetToBase,
-            itemCount = globalConfiguration.itemCount
-        ))
-        val answerLanguage = if (targetToBase) dico.translationLanguage else dico.wordLanguage
-        val context = QuizContext(quiz, answerLanguage)
-        context.nextItem()
-
-        globalContext = context
-        val intent = Intent(this, QuizActivity::class.java)
-        startActivity(intent)
+        startQuiz(this, targetToBase, category)
     }
 
     @Composable

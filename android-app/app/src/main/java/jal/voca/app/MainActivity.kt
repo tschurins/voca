@@ -6,6 +6,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
@@ -25,6 +26,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.max
 import jal.voca.app.ui.theme.VocaTheme
+import jal.voca.lang.Dictionary
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +37,7 @@ class MainActivity : ComponentActivity() {
             VocaTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Menu(
+                        getGlobalDictionary(this.filesDir),
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -43,7 +46,7 @@ class MainActivity : ComponentActivity() {
     }
 
     @Composable
-    fun Menu(modifier: Modifier = Modifier) {
+    fun Menu(dictionary: Dictionary, modifier: Modifier = Modifier) {
         val density = LocalDensity.current
 
         var width by remember { mutableStateOf(0.dp) }
@@ -68,6 +71,17 @@ class MainActivity : ComponentActivity() {
             Button(modifier = buttonModifier, onClick = { goToUnitMenu() }) {
                 Text("Units")
             }
+            if (!globalFavorites.isEmpty()) {
+                Button(modifier = buttonModifier, onClick = { startFavoritesQuiz(dictionary, true) }) {
+                    Text("Favorites -> " + dictionary.translationLanguage.name)
+                }
+                Button(modifier = buttonModifier, onClick = { startFavoritesQuiz(dictionary, false) }) {
+                    Text("Favorites -> " + dictionary.wordLanguage.name)
+                }
+            }
+
+
+            Spacer(Modifier.weight(1f))
             Button(modifier = buttonModifier, onClick = { goToConfig() }) {
                 Text("Configuration")
             }
@@ -88,6 +102,12 @@ class MainActivity : ComponentActivity() {
         startActivity(intent)
     }
 
+    private fun startFavoritesQuiz(dictionary: Dictionary, targetToBase: Boolean) {
+        globalCategoryLoader = null
+        val favoritesCategory = globalFavorites.getFavoritesCategory(dictionary)
+        startQuiz(this, targetToBase, favoritesCategory)
+    }
+
     private fun goToConfig() {
         val intent = Intent(this, ConfigurationActivity::class.java)
         startActivity(intent)
@@ -96,8 +116,10 @@ class MainActivity : ComponentActivity() {
     @Preview(showBackground = true)
     @Composable
     fun MenuPreview() {
+        globalFavorites.setFavorite("Q?", true)
+        val dictionary = getGlobalDictionary()
         VocaTheme {
-            Menu()
+            Menu(dictionary)
         }
     }
 }
