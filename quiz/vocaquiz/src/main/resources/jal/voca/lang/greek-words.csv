@@ -174,41 +174,41 @@ Persons|S2U10|δυνατός|strong / powerful|a
 Persons|S2U10|βρώμικος|dirty|a
 Persons|S2U10|καθαρός|clean / clear|a
 Persons|S2U13|μοντέλο|model|n(n,,)
-Persons|S2U13|συγγραφέας |writer|n(m,,)
+Persons|S2U13|συγγραφέας|writer|n(m,,)
 Persons|S2U13|δουλειά  / εργασία|job / work|n(f,,)
-Persons|S2U13|μαθητής |student|n(m,,)
-Persons|S2U13|γιατρός |doctor|n(m,,)
-Persons|S2U13|παπάς |priest|n(m,,)
-Persons|S2U13|γραμματέας |secretary|n(f,,)
-Persons|S2U13|εργάτης |worker|n(m,,)
-Persons|S2U13|επαγγελματίας |professional |a
-Persons|S2U13|καριέρα |career|n(f,,)
-Persons|S2U13|δικηγόρος |lawyer |n(m,,)
-Persons|S2U13|διευθυντής |manager|n(m,,)
-Persons|S2U13|καλλιτέχνης |artist|n(m,,)
-Persons|S2U13|στρατιώτης |soldier|n(m,,)
-Persons|S2U13|αξιωματικός |officer|n(m,,)
-Persons|S2U13|προϊστάμενος |manager / boss|n(m,,)
-Persons|S2U13|ηθοποιός |actor|n(m,,)
-Persons|S2U13|καπετάνιος |captain|n(m,,)
-Persons|S2U13|φύλακας |guard|n(m,,)
-Persons|S2U13|δικαστής |judge|n(m,,)
-Persons|S2U13|συντάκτης |author|n(m,,)
-Persons|S2U13|μηχανικός |mechanic / engineer |n(m,,)
-Persons|S2U13|αγρότης |farmer|n(m,,)
-Persons|S2U13|σερβιτόρα |waitress |n(f,,)
-Persons|S2U13|αφεντικό |boss|n(n,,)
-Persons|S2U13|επάγγελμα |profession|n(n,,)
-Persons|S2U13|μάγειρας |cook|n(m,,)
-Persons|S2U13|σερβιτόρος |waiter|n(m,,)
-Persons|S2U13|πυροσβέστης |firefighter|n(m,,)
-Persons|S2U13|οικοδόμος |builder|n(m,,)
-Persons|S2U13|αστυνομικός |policeman |n(m,,)
-Persons|S2U13|ηλεκτρολόγος |electrician |n(m,,)
-Persons|S2U13|καθαριστής |cleaner|n(m,,)
-Persons|S2U13|υδραυλικός |plumber|n(m,,)
-Persons|S2U13|οδηγός |driver|n(m,,)
-Persons|S2U13|κτηνίατρος |vet / veterinarian |n(m,,)
+Persons|S2U13|μαθητής|student|n(m,,)
+Persons|S2U13|γιατρός|doctor|n(m,,)
+Persons|S2U13|παπάς|priest|n(m,,)
+Persons|S2U13|γραμματέας|secretary|n(f,,)
+Persons|S2U13|εργάτης|worker|n(m,,)
+Persons|S2U13|επαγγελματίας|professional|a
+Persons|S2U13|καριέρα|career|n(f,,)
+Persons|S2U13|δικηγόρος|lawyer|n(m,,)
+Persons|S2U13|διευθυντής|manager|n(m,,)
+Persons|S2U13|καλλιτέχνης|artist|n(m,,)
+Persons|S2U13|στρατιώτης|soldier|n(m,,)
+Persons|S2U13|αξιωματικός|officer|n(m,,)
+Persons|S2U13|προϊστάμενος|manager / boss|n(m,,)
+Persons|S2U13|ηθοποιός|actor|n(m,,)
+Persons|S2U13|καπετάνιος|captain|n(m,,)
+Persons|S2U13|φύλακας|guard|n(m,,)
+Persons|S2U13|δικαστής|judge|n(m,,)
+Persons|S2U13|συντάκτης|author|n(m,,)
+Persons|S2U13|μηχανικός|mechanic / engineer|n(m,,)
+Persons|S2U13|αγρότης|farmer|n(m,,)
+Persons|S2U13|σερβιτόρα|waitress|n(f,,)
+Persons|S2U13|αφεντικό|boss|n(n,,)
+Persons|S2U13|επάγγελμα|profession|n(n,,)
+Persons|S2U13|μάγειρας|cook|n(m,,)
+Persons|S2U13|σερβιτόρος|waiter|n(m,,)
+Persons|S2U13|πυροσβέστης|firefighter|n(m,,)
+Persons|S2U13|οικοδόμος|builder|n(m,,)
+Persons|S2U13|αστυνομικός|policeman|n(m,,)
+Persons|S2U13|ηλεκτρολόγος|electrician|n(m,,)
+Persons|S2U13|καθαριστής|cleaner|n(m,,)
+Persons|S2U13|υδραυλικός|plumber|n(m,,)
+Persons|S2U13|οδηγός|driver|n(m,,)
+Persons|S2U13|κτηνίατρος|vet / veterinarian|n(m,,)
 Expression|S1U1|ναι|yes|
 Expression|S1U1|όχι|no|
 Expression|S1U4|γεια|Hello / Bye|
@@ -234,7 +234,7 @@ Expression|S1U8|εντάξει|Alright / OK|
 Expression|S2U2|μου αρέσει το παγωτό|I like the ice cream|
 Expression||Πόσο κάνει αυτό;|How much is that?|
 Expression||Τι τρέχει;|What's the matter?|
-Expression||Έχει ήλιο και κάνει ζέστη |It's sunny and it's hot|
+Expression||Έχει ήλιο και κάνει ζέστη|It's sunny and it's hot|
 Expression||Πόσο χρονών είσαι;|How old are you?|
 Other|S1U1|μίνι μάρκετ|mini market|n(n,,)
 Other|S1U1|βάζο|vase|n(n,,)
@@ -306,7 +306,7 @@ Conjunctions|S2U8|λόγω|because / due to / because of / the reason behind|
 Conjunctions|S2U8|εκτός (από)|except|
 Conjunctions|S2U8|κοντά (σε)|nearby / close to|
 Conjunctions|S2U12|παρά|but|
-Conjunctions|S2U13|ως |as|
+Conjunctions|S2U13|ως|as|
 Adjectives|S1U1|ροζ|pink|a
 Adjectives|S1U6|μεγάλος|big / tall|a
 Adjectives|S1U6|μικρός|little / tiny / small|a
@@ -349,7 +349,7 @@ Adjectives|S2U11|προσωπικός|personal|a
 Adjectives|S2U11|αριστερός|left|a
 Adjectives|S2U11|βασικός|basic|a
 Adjectives|S2U11|δύσκολος|difficult|a
-Adjectives|S2U11|επίσημος|offical / formal|a
+Adjectives|S2U11|επίσημος|official / formal|a
 Adjectives|S2U11|κλειστός|closed|a
 Adjectives|S2U11|ωραίος|nice|a
 Adjectives|S2U11|νόμιμος|legal|a
@@ -397,7 +397,7 @@ Animals|S1U12|έντομο|insect|n(n,,)
 Animals|S1U12|πεταλούδα|butterfly|n(f,,)
 Animals|S1U12|καβούρι|crab|n(n,,)
 Animals|S1U12|αράχνη|spider|n(f,,)
-Clothes|S1U14|καπέλο|hat |n(n,,)
+Clothes|S1U14|καπέλο|hat|n(n,,)
 Clothes|S1U14|φούστα|skirt|n(f,,)
 Clothes|S1U14|πουκάμισο|shirt|n(n,,)
 Clothes|S1U14|γάντι|glove|n(n,,)

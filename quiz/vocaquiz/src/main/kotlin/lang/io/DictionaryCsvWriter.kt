@@ -14,7 +14,11 @@ class DictionaryCsvWriter {
         try {
             for (ct in words) {
                 for (cat in ct.categories) {
-                    pw.println(cat + "|" + ct.unit + "|" + ct.translation.word.word + "|" + ct.translation.translation.word + "|" + ct.translation.word.typeInfo)
+                    pw.println(cat.trim() 
+                        + "|" + ct.unit.trim() 
+                        + "|" + ct.translation.word.word.trim() 
+                        + "|" + ct.translation.translation.word.trim() 
+                        + "|" + ct.translation.word.typeInfo.toString().trim())
                 }
             }
         } finally {

@@ -135,7 +135,7 @@ class DictionaryGoogleSheetReader(
             if ("" == value) {
                 return null
             } else {
-                return value
+                return value?.trim()
             }
         } else {
             return null;

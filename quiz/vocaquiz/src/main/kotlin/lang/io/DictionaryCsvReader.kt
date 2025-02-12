@@ -51,10 +51,10 @@ class DictionaryCsvReader {
             while (line != null) {
                 val values = line.split("|")
                 val category = values[0]
-                val unit = values[1]
-                val w = values[2]
-                val t = values[3]
-                val typeInfoN = if (values.size > 4) TypeInfo.parseTypeInfo(values[4]) else TypeInfo()
+                val unit = values[1].trim()
+                val w = values[2].trim()
+                val t = values[3].trim()
+                val typeInfoN = if (values.size > 4) TypeInfo.parseTypeInfo(values[4].trim()) else TypeInfo()
                 val typeInfo = if (typeInfoN == null) TypeInfo() else typeInfoN
 
                 result.add(w, t, typeInfo, category, unit)
