@@ -14,7 +14,7 @@ class DictionaryCsvReaderTest {
         assertEquals(1, allWords.size)
         val ct = allWords[0]
         assertEquals("unit", ct.unit)
-        assertEquals(listOf("cat"), ct.categories)
+        assertEquals(setOf("cat"), ct.categories)
         val translation = ct.translation
         assertEquals("word", translation.word.word)
         assertEquals("trans", translation.translation.word)

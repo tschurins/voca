@@ -1,5 +1,6 @@
 package jal.voca.lang.io
 
+import java.util.*
 import jal.voca.lang.*
 
 inline fun <reified T : kotlin.Enum<T>> valueOf(type: String?): T? {
@@ -16,7 +17,9 @@ class WordsBuilder {
             Word(w, typeInfo),
             Word(t, TypeInfo(type = typeInfo.type, cardinality = typeInfo.cardinality))
         )
-        val ct = CategorizedTranslation(translation, mutableListOf(category), unit)
+        val categories = TreeSet<String>()
+        categories.add(category)
+        val ct = CategorizedTranslation(translation, categories, unit)
 
         val existing = words.put(w, ct)
         if (existing != null) {
@@ -29,7 +32,7 @@ class WordsBuilder {
             if (existing.unit != unit) {
                 throw RuntimeException("not the same unit for word " + w + "(was " + existing.unit + " while expecting " + unit + ")")
             }
-            (ct.categories as MutableList).addAll(existing.categories)
+            (ct.categories as MutableSet).addAll(existing.categories)
         }
     }
 }

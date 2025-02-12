@@ -7,6 +7,6 @@ data class Translation(
 
 data class CategorizedTranslation(
     val translation: Translation,
-    val categories: List<String>,
+    val categories: Collection<String>,
     val unit: String
 )
