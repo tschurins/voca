@@ -3,7 +3,7 @@ package jal.voca.quiz
 import jal.voca.lang.*
 import java.util.Random
 
-data class QuizItem(val question: String, val answer: String, val moreInfo: String)
+data class QuizItem(val id: String, val question: String, val answer: String, val moreInfo: String)
 
 data class Quiz(val items: List<QuizItem>) {
     companion object {
@@ -75,7 +75,7 @@ data class Quiz(val items: List<QuizItem>) {
                         toWord = word.word
                     }
                 }
-                result.add(QuizItem(fromWord, toWord, moreInfo.joinToString()))
+                result.add(QuizItem(word.word, fromWord, toWord, moreInfo.joinToString()))
             }
             return result
         }

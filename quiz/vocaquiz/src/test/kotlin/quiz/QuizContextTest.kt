@@ -8,7 +8,7 @@ import kotlin.test.Test
 class QuizContextTest {
     @Test
     fun getSuccess_singleAnswer() {
-        val context = QuizContext(Quiz(listOf(QuizItem("Q?", "Answer", ""))), getLanguage())
+        val context = QuizContext(Quiz(listOf(QuizItem("id", "Q?", "Answer", ""))), getLanguage())
         context.nextItem()
         context.setAnswer("answer")
         val result = context.checkSuccess()
@@ -17,7 +17,7 @@ class QuizContextTest {
 
     @Test
     fun getSuccess_failure() {
-        val context = QuizContext(Quiz(listOf(QuizItem("Q?", "Answer", ""))), getLanguage())
+        val context = QuizContext(Quiz(listOf(QuizItem("id", "Q?", "Answer", ""))), getLanguage())
         context.nextItem()
         context.setAnswer("wrong")
         val result = context.checkSuccess()
@@ -26,7 +26,7 @@ class QuizContextTest {
 
     @Test
     fun getSuccess_homophone() {
-        val context = QuizContext(Quiz(listOf(QuizItem("Q?", "Answer with Y", ""))), getLanguage())
+        val context = QuizContext(Quiz(listOf(QuizItem("id", "Q?", "Answer with Y", ""))), getLanguage())
         context.nextItem()
         context.setAnswer("answer with i")
         val result = context.checkSuccess()
@@ -35,7 +35,7 @@ class QuizContextTest {
 
     @Test
     fun getSuccess_comment() {
-        val context = QuizContext(Quiz(listOf(QuizItem("Q?", "Answer (comment)", ""))), getLanguage())
+        val context = QuizContext(Quiz(listOf(QuizItem("id", "Q?", "Answer (comment)", ""))), getLanguage())
         context.nextItem()
         context.setAnswer("answer")
         val result = context.checkSuccess()
@@ -44,7 +44,7 @@ class QuizContextTest {
 
     @Test
     fun getSuccess_multipleAnswers() {
-        val context = QuizContext(Quiz(listOf(QuizItem("Q?", "Answer1 / Answer2", ""))), getLanguage())
+        val context = QuizContext(Quiz(listOf(QuizItem("id", "Q?", "Answer1 / Answer2", ""))), getLanguage())
         context.nextItem()
         context.setAnswer("answer2")
         val result = context.checkSuccess()
@@ -53,7 +53,7 @@ class QuizContextTest {
 
     @Test
     fun getSuccess_multipleAnswers_homophone() {
-        val context = QuizContext(Quiz(listOf(QuizItem("Q?", "pie / pye", ""))), getLanguage())
+        val context = QuizContext(Quiz(listOf(QuizItem("id", "Q?", "pie / pye", ""))), getLanguage())
         context.nextItem()
         context.setAnswer("pye")
         val result = context.checkSuccess()
@@ -62,7 +62,7 @@ class QuizContextTest {
 
     @Test
     fun getSuccess_alternative() {
-        val item = QuizItem("Q?", "A[n] Answer", "")
+        val item = QuizItem("id", "Q?", "A[n] Answer", "")
         val context = QuizContext(Quiz(listOf(item)), getLanguage())
         context.nextItem()
         context.setAnswer("an answer")
@@ -73,7 +73,7 @@ class QuizContextTest {
 
     @Test
     fun getSuccess_trim() {
-        val item = QuizItem("Q?", "A", "")
+        val item = QuizItem("id", "Q?", "A", "")
         val context = QuizContext(Quiz(listOf(item)), getLanguage())
         context.nextItem()
         context.setAnswer("A ")
