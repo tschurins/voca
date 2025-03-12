@@ -60,6 +60,9 @@ class DictionaryGoogleSheetReader(
         val wordS = getValue(row, 0)
         if (wordS != null) {
             val translationS = getValue(row, 1)
+            if (translationS == null) {
+                throw RuntimeException("no translation for word " + wordS)
+            }
             val typeInfoS = getValue(row, 2)
             val typeInfo: TypeInfo
             if (typeInfoS != null) {

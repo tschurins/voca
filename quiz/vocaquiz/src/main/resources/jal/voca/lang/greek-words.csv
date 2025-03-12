@@ -215,7 +215,7 @@ Expression|S1U4|γεια|Hello / Bye|
 Expression|S1U4|γεια σου|Hello (to one person)|
 Expression|S1U4|γεια σας|Hello (to multiple persons / formal)|
 Expression|S1U4|Χαίρετε|Hello|
-Expression|S1U4|θα ήθελα...|I would like...|
+Expression|S1U4|θα ήθελα|I would like|
 Expression|S1U5|παρακαλώ|please|
 Expression|S1U5|ευχαριστώ|Thank you|
 Expression|S1U8|πώς είσαι|How are you (singular)|
@@ -226,7 +226,7 @@ Expression|S1U8|καλησπέρα|Good afternoon|
 Expression|S1U8|Καληνύχτα|Good night|
 Expression|S1U8|τα λέμε|See you|
 Expression|S1U8|χάρηκα|Nice to meet you|
-Expression|S1U8|με λένε...|My name is...|
+Expression|S1U8|με λένε|My name is|
 Expression|S1U8|ορίστε|Here you are|
 Expression|S1U8|αντίο|Goodbye|
 Expression|S1U8|Πώς σε λένε;|What is your name?|
@@ -237,7 +237,6 @@ Expression||Τι τρέχει;|What's the matter?|
 Expression||Έχει ήλιο και κάνει ζέστη|It's sunny and it's hot|
 Expression||Πόσο χρονών είσαι;|How old are you?|
 Other|S1U1|μίνι μάρκετ|mini market|n(n,,)
-Other|S1U1|βάζο|vase|n(n,,)
 Other|S1U2|βίντεο|video|n(n,,)
 Other|S1U2|μουσείο|museum|n(n,,)
 Other|S1U2|σινεμά|cinema|n(n,,)
@@ -307,12 +306,32 @@ Conjunctions|S2U8|εκτός (από)|except|
 Conjunctions|S2U8|κοντά (σε)|nearby / close to|
 Conjunctions|S2U12|παρά|but|
 Conjunctions|S2U13|ως|as|
+Conjunctions|S2U14|ότι|that|
+Conjunctions|S2U14|όποτε|whenever|
+Conjunctions|S2U14|όταν|when|
+Conjunctions|S2U14|αλλά|but|
+Conjunctions|S2U14|όμως|however|
+Conjunctions|S2U14|άρα|so / therefore|
+Conjunctions|S2U14|ή|or|
+Conjunctions|S2U14|αν|if|
+Conjunctions|S2U14|αν και|although / though|
+Conjunctions|S2U14|ωστόσο|yet / nonetheless|
+Conjunctions|S2U14|ενώ|while / as|
+Conjunctions|S2U14|οπότε|therefore|
+Conjunctions|S2U14|καθώς|as / while|
+Conjunctions|S2U14|λοιπόν|so / well|
+Conjunctions|S2U14|δηλαδή|that is / so / namely|
+Conjunctions|S2U14|μήπως|maybe|
+Conjunctions|S2U14|κι|too / also|
+Conjunctions|S2U15|μόνος|only / by himself|
+Conjunctions|S2U15|ίδιος|same|
+Conjunctions|S2U15|τον εαυτό της|herself|
 Adjectives|S1U1|ροζ|pink|a
 Adjectives|S1U6|μεγάλος|big / tall|a
 Adjectives|S1U6|μικρός|little / tiny / small|a
 Adjectives|S1U8|καλά|fine / well / good|a
-Clothes|S1U14|μάλλινος|woolen|a
 Adjectives|S1U14|μάλλινος|woolen|a
+Clothes|S1U14|μάλλινος|woolen|a
 Adjectives|S1U14|δερμάτινος|leather|a
 Adjectives|S2U3|μαύρο|black|a
 Adjectives|S2U3|καφέ|brown|a
@@ -407,7 +426,7 @@ Clothes|S1U14|παπούτσι|shoe|n(n,,)
 Clothes|S1U14|παντελόνι|pants|n(n,,)
 Clothes|S1U14|παλτό|coat|n(n,,)
 Clothes|S1U14|ρούχο|piece of clothing|n(n,s,)
-Clothes|S1U14|ρούχα|clothing|n(n,pl,)
+Clothes|S1U14|ρούχα|clothing (pl)|n(n,pl,)
 Clothes|S1U14|μπλούζα|blouse|n(f,,)
 Clothes|S1U14|κάλτσα|sock|n(f,,)
 Clothes|S1U14|κουστούμι|suit|n(n,,)
@@ -417,7 +436,7 @@ Clothes|S1U14|κόσμηματα|jewelry|n(n,pl,ματα)
 Clothes|S1U14|στολή|uniform|n(f,,)
 Clothes|S1U14|ζώνη|belt|n(f,,)
 Clothes|S1U14|εσώρουχο|piece of underwear|n(n,s,)
-Clothes|S1U14|εσώρουχα|underwear|n(n,pl,)
+Clothes|S1U14|εσώρουχα|underwear (pl)|n(n,pl,)
 Clothes|S1U14|μπότα|boot|n(f,,)
 Clothes|S1U14|τσέπη|pocket|n(f,,)
 Clothes|S1U14|πορτοφόλι|wallet|n(n,,)
@@ -523,3 +542,65 @@ Time|S2U12|τέταρτο|quarter|
 Time|S2U12|μισή|half|
 Time|S2U12|μέχρι|until|
 Time|S2U12|πάλι|again|
+Objects|S1U1|βάζο|vase|n(n,,)
+Objects|S2U16|ραδιόφωνο|radio|n(n,,)
+Objects|S2U16|μπουκάλι|bottle|n(n,,)
+Objects|S2U16|κουτάλι|spoon|n(n,,)
+Objects|S2U16|περιοδικό|magazine|n(n,,)
+Objects|S2U16|καρέκλα|chair|n(f,,)
+Objects|S2U16|μηχανή|machine|n(f,,)
+Objects|S2U16|τηλεόραση|television|n(f,,)
+Objects|S2U16|μπολ|bowl|n(n,,)
+Objects|S2U16|κουβέρτα|blanket|n(f,,)
+Objects|S2U16|καλάθι|basket|n(n,,)
+Objects|S2U16|κινητό|cellphone|n(n,,)
+Objects|S2U16|υπολογιστής|computer|n(m,,)
+Objects|S2U16|ρολόι|watch / clock|n(n,,)
+Objects|S2U16|σχοινί|rope|n(n,,)
+Objects|S2U16|παιχνίδι|toy / game|n(n,,)
+Objects|S2U16|μπαταρία|battery|n(f,,)
+Objects|S2U16|πιστόλι|gun|n(n,,)
+Objects|S2U16|τετράδιο|notebook|n(n,,)
+Objects|S2U16|οθόνη|screen|n(f,,)
+Objects|S2U16|πιστολάκι|hairdryer|n(,,)
+Objects|S2U16|δώρο|gift / present|n(n,,)
+Objects|S2U16|σεντόνι|bedsheet|n(n,,)
+Objects|S2U16|κουτί|box|n(n,,)
+Objects|S2U16|στύλος|pen|n(m,,)
+Objects|S2U16|οδοντόκρεμα|toothpaste|n(f,,)
+Objects|S2U16|καλαμάκι|straw|n(,,)
+Objects|S2U16|σαπούνι|soap|n(n,,)
+Objects|S2U16|ξυράφι|razor|n(n,,)
+Objects|S2U16|κλειδί|key|n(n,,)
+Objects|S2U16|οδοντόβουρστα|toothbrush|n(f,,)
+Objects|S2U16|μολύβι|pencil|n(n,,)
+Objects|S2U16|πράγμα|object / thing|n(n,,)
+Objects|S2U16|κουμπαράς|piggy bank|n(m,,)
+Objects|S2U16|ρόδα|wheel|n(f,,)
+Objects|S2U16|αποσμητικό|deodorant|n(n,,)
+Objects|S2U16|τσάντα|bag|n(f,,)
+Objects|S2U16|σφουγγάρι|sponge|n(n,,)
+Objects|S2U16|λάμπα|lamp|n(f,,)
+Objects|S2U16|κλωστή|thread|n(f,,)
+Objects|S2U16|κομμάτι|part / bit|n(n,,)
+Objects|S2U16|κούπα|cup / mug|n(f,,)
+Objects|S2U16|βελόνα|needle|n(f,,)
+Objects|S2U16|συσκευή|device|n(f,,)
+Objects|S2U16|ομπρέλα|umbrella|n(f,,)
+Objects|S2U16|γόμα|eraser|n(f,,)
+Objects|S2U16|ψαλίδι|scissors|n(n,s,)
+Objects|S2U16|γράμμα|letter|n(n,,)
+Objects|S2U16|αλυσίδα|chain|n(f,,)
+Objects|S2U16|χαρτί|paper|n(n,,)
+Objects|S2U16|τηγάνι|pan / frying pan|n(n,,)
+Objects|S2U16|πιρούνι|fork|n(n,,)
+Objects|S2U16|αντικείμενο|object / item|n(n,,)
+Objects|S2U16|κατσαρόλα|pan / pot|n(f,,)
+Objects|S2U16|πετσέτα|towel|n(f,,)
+Objects|S2U16|καμπάνα|bell|n(f,,)
+Objects|S2U16|μυθιστόρημα|novel|n(n,,)
+Objects|S2U16|σημαία|flag|n(f,,)
+Objects|S2U16|μαξιλάρι|pillow|n(n,,)
+Objects|S2U16|μαχαίρι|knife|n(n,,)
+Objects|S2U16|χτένα|comb|n(f,,)
+Objects|S2U16|κάμερα|camera|n(f,,)
