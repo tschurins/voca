@@ -25,15 +25,26 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.max
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.lifecycle.lifecycleScope
 import jal.voca.app.ui.theme.VocaTheme
 import jal.voca.lang.Dictionary
+import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        val splashscreen = installSplashScreen()
+        var keepSplashScreen = true
         super.onCreate(savedInstanceState)
+        splashscreen.setKeepOnScreenCondition { keepSplashScreen }
+        lifecycleScope.launch {
+            load()
+            keepSplashScreen = false
+        }
+        globalConfiguration.readFrom(this.filesDir)
 
         enableEdgeToEdge()
-                setContent {
+        setContent {
             VocaTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Menu(
@@ -86,6 +97,11 @@ class MainActivity : ComponentActivity() {
                 Text("Configuration")
             }
         }
+    }
+
+    private fun load() {
+        getGlobalDictionary(this.filesDir)
+        FavoritesLoader(this).loadFavorites()
     }
 
     private fun goToCategoryMenu() {

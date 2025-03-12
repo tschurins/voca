@@ -10,6 +10,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -44,7 +45,7 @@ class ConfigurationActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         enableEdgeToEdge()
-                setContent {
+        setContent {
             VocaTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Configuration(
@@ -116,6 +117,8 @@ class ConfigurationActivity : ComponentActivity() {
                     Text("Clear local files")
                 }
             }
+
+            Spacer(Modifier.weight(1f))
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.padding(4.dp).fillMaxWidth()
@@ -131,9 +134,14 @@ class ConfigurationActivity : ComponentActivity() {
                     } catch (nfe: NumberFormatException) {
                         // not a valid int TODO do something smart
                     }
-                    backToMain()
+                    backToMain(true)
                 }) {
                     Text("Save")
+                }
+                Button(modifier = Modifier.padding(4.dp), onClick = {
+                    backToMain(false)
+                }) {
+                    Text("Cancel")
                 }
             }
         }
@@ -177,7 +185,12 @@ class ConfigurationActivity : ComponentActivity() {
         }
     }
 
-    private fun backToMain() {
+    private fun backToMain(save: Boolean) {
+        if (save) {
+            // save configuration
+            globalConfiguration.writeTo(this.filesDir)
+        }
+
         // restart the main activity as top of the back stack.
         val intent = Intent(this, MainActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)

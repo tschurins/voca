@@ -58,8 +58,9 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation("jal.voca:vocaquiz:0.1-SNAPSHOT")
-    implementation("jal.voca:vocaio-gs:0.1-SNAPSHOT")
+    implementation(libs.androidx.splashscreen)
+    implementation(libs.jal.vocaquiz)
+    implementation(libs.jal.vocaiogs)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

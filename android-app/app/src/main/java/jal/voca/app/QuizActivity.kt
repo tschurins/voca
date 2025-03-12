@@ -15,9 +15,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Button
@@ -51,8 +53,11 @@ import jal.voca.quiz.QuizItem
 
 
 class QuizActivity : ComponentActivity() {
+    private var dbHelper: FavoritesManager? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        dbHelper = FavoritesManager(this)
 
         enableEdgeToEdge()
         setContent {
@@ -189,12 +194,12 @@ class QuizActivity : ComponentActivity() {
                         Text("Next")
                     }
                 }
+                Spacer(Modifier.weight(1f))
                 Button(onClick = {
                     endAction()
                 }, modifier = Modifier.padding(4.dp)) {
                     Text("End")
                 }
-                Spacer(Modifier.weight(1f))
                 FavoriteButton(item = item, modifier = Modifier.padding(4.dp))
             }
         }
@@ -205,7 +210,7 @@ class QuizActivity : ComponentActivity() {
         item: QuizItem,
         modifier: Modifier,
     ) {
-        var stateF by remember { mutableStateOf(globalFavorites.isFavorite(item.question)) }
+        var stateF by remember { mutableStateOf(globalFavorites.isFavorite(item.id)) }
 
         Box(modifier = modifier.padding(horizontal = 10.dp)) {
             Button(
@@ -232,7 +237,9 @@ class QuizActivity : ComponentActivity() {
     @Composable
     fun Result(context: QuizContext, modifier: Modifier = Modifier, nextAction: () -> Unit) {
         Column(modifier = modifier
-                .fillMaxSize()) {
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState())
+        ) {
             Text(if (globalCategory == null) "All words" else globalCategory!!.name, modifier = Modifier.padding(4.dp))
             Text("Result: " + context.score.score + "/" + context.score.total, modifier = Modifier.padding(4.dp))
             if (context.failures.isNotEmpty()) {
@@ -250,7 +257,11 @@ class QuizActivity : ComponentActivity() {
     }
 
     private fun setFavorite(item: QuizItem, favorite: Boolean) {
-        globalFavorites.setFavorite(item.question, favorite)
+        if (favorite) {
+            dbHelper?.addFavorite(item.id)
+        } else {
+            dbHelper?.removeFavorite(item.id)
+        }
     }
 
     private fun backToMenu() {
@@ -260,11 +271,19 @@ class QuizActivity : ComponentActivity() {
         startActivity(intent)
     }
 
+    override fun onDestroy() {
+        dbHelper?.close()
+        super.onDestroy()
+    }
+
+
+
+
     @Preview(showBackground = true)
     @Composable
     fun QuestionPreview() {
         globalFavorites.clear()
-        val context = QuizContext(Quiz(listOf(QuizItem("What is the color of Napoleon's white horse?", "White", ""))), English())
+        val context = QuizContext(Quiz(listOf(QuizItem("id", "What is the color of Napoleon's white horse?", "White", ""))), English())
         context.nextItem()
         VocaTheme {
             Quiz(context = context, initialState = State.QUESTION)
@@ -275,8 +294,8 @@ class QuizActivity : ComponentActivity() {
     @Composable
     fun QuestionPreviewFavorite() {
         val question = "What is the color of Napoleon's white horse?"
-        val context = QuizContext(Quiz(listOf(QuizItem(question, "White", ""))), English())
-        globalFavorites.setFavorite(question, true)
+        val context = QuizContext(Quiz(listOf(QuizItem("id", question, "White", ""))), English())
+        globalFavorites.setFavorite("id", true)
         context.nextItem()
         VocaTheme {
             Quiz(context = context, initialState = State.QUESTION)
@@ -287,7 +306,7 @@ class QuizActivity : ComponentActivity() {
     @Composable
     fun CorrectAnswerPreview() {
         globalFavorites.clear()
-        val context = QuizContext(Quiz(listOf(QuizItem("What is the color of Napoleon's white horse?", "White", ""))), English())
+        val context = QuizContext(Quiz(listOf(QuizItem("id", "What is the color of Napoleon's white horse?", "White", ""))), English())
         context.nextItem()
         context.setAnswer("White")
         VocaTheme {
@@ -300,8 +319,8 @@ class QuizActivity : ComponentActivity() {
     fun WrongAnswerPreview() {
         globalFavorites.clear()
         val context = QuizContext(Quiz(listOf(
-            QuizItem("What is the color of Napoleon's white horse?", "White", ""),
-            QuizItem("next", "a", ""),
+            QuizItem("id1", "What is the color of Napoleon's white horse?", "White", ""),
+            QuizItem("id2", "next", "a", ""),
         )), English())
         context.nextItem()
         context.setAnswer("Black")
@@ -313,7 +332,7 @@ class QuizActivity : ComponentActivity() {
     @Preview(showBackground = true)
     @Composable
     fun ResultPreview() {
-        val context = QuizContext(Quiz(listOf(QuizItem("What is the color of Napoleon's white horse?", "White", ""))), English())
+        val context = QuizContext(Quiz(listOf(QuizItem("id", "What is the color of Napoleon's white horse?", "White", ""))), English())
         context.nextItem()
         for (i in 1..9) {
             context.success()

@@ -44,8 +44,6 @@ var globalContext : QuizContext? = null
  */
 val globalConfiguration = AppConfiguration()
 
-data class AppConfiguration(var itemCount: Int = 10)
-
 /**
  * Loader to get the categories from a dictionary.
  * It is initialized based on the choice of category type to use (word-categories

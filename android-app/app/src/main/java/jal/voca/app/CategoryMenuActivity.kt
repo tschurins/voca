@@ -37,7 +37,7 @@ class CategoryMenuActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         enableEdgeToEdge()
-                setContent {
+        setContent {
             VocaTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Menu(
